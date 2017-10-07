@@ -1,0 +1,89 @@
+header
+{
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)), url("../bg.jpg");
+    height: 100vh;
+    background-attachment: fixed;
+    background-position:top;
+    background-size: cover;
+}
+.hi
+{
+    height: 60px;
+}
+.logo
+{
+    text-align: left;
+    letter-spacing: 2px;
+    color: #0F0E0E;
+    margin-top: 3px;
+    font-size: 50px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.he
+{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 4px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+.he:hover{
+
+    text-align: center;
+    color: white;
+    margin-top: 4px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #14CC60;
+
+}
+.but
+{
+    background-color: #40BAF5;
+    text-align: end;
+    margin-top: 7px;
+    color: white;
+}
+.qou
+{
+    text-align: center;
+    margin-top: 170px;
+}
+.qoum
+{
+    font-size: 60px;
+    color: white;
+}
+
+.but1
+{
+    background-color: #F68D27;
+    font-size: 20px;
+    text-align: end;
+    font-family: Arial;
+    margin-top: 30px;
+    color: white;
+}
+.cont h2{
+    margin-top: 20px;
+}
+
+.cont
+{
+    text-align: center;
+    height: 450px;
+}
+.cont1
+{   text-align: center;
+    background-color: gainsboro;
+    height: 450px;
+}
+.cont2
+{   text-align: center;
+    background-color: #1b1e21;
+    height: 400px;
+}
