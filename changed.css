@@ -10,6 +10,7 @@ header
 {
     height: 60px;
 }
+
 .logo
 {
     text-align: left;
@@ -29,6 +30,28 @@ header
     text-decoration: none;
     word-spacing: 2px;
     letter-spacing: 1px;
+}
+.hee
+{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    margin-top: 4px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+	    border-left: 3px solid #14CC60;
+
+}
+.hee:hover{
+
+    text-align: center;
+    color: blck;
+    margin-top: 4px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #14CC60;
 }
 .he:hover{
 
@@ -77,6 +100,7 @@ header
     text-align: center;
     height: 450px;
 }
+
 .cont1
 {   text-align: center;
     background-color: gainsboro;
@@ -85,64 +109,15 @@ header
 .cont2
 {   text-align: center;
     background-color: #1b1e21;
-    height: 450px;
-}
-.k1
-{
-    text-align: center;
-    color:#3B5998;
-    font-size: 40px;
-    margin-top: 4px;
-    text-decoration: none;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-}
-.k2
-{
-    text-align: center;
-    color: #e1306c;
-    font-size: 40px;
-    margin-top: 4px;
-    text-decoration: none;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-}
-.k3
-{
-    text-align: center;
-    color: #6e5494;
-    font-size: 40px;
-    margin-top: 4px;
-    text-decoration: none;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-}
-.k4
-{
-    text-align: center;
-    color: #1da1f2;
-    font-size: 40px;
-    margin-top: 4px;
-    text-decoration: none;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-}
-.k:hover{
-    text-align: center;
-    color: #F7F7F7;
-    font-size: 40px;
-    margin-top: 4px;
-    text-decoration: none;
-    word-spacing: 2px;
-    letter-spacing: 1px;
+    height: 400px;
+	  padding-bottom: 3rem;
 
 }
-
 .placeholders {
-    padding-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 .placeholder img {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .center-pills { display: inline-block; }

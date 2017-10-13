@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+
+
+
+
+
+
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url(bg.jpg);
+	background-size: cover;
+	font-family: sans-serif;
+}
+
+header{
+	
+	color: white;
+	padding: 8px 0px 6px 4px;
+	height: 60px;
+
+}
+
+header h1{
+	display: inline;
+	font-family: 'Oswald', sans-serif;
+	font-size:45px;
+	float:left;
+	margin-top:0px;
+	margin-right:10px;
+
+}
+
+nav ul{
+	display: inline;
+	padding: 0px;
+	float: left;
+
+}
+
+nav ul li{
+	display: inline-block;
+	list-style-type: none;
+	color: white;
+	float: left;
+	margin-left: 12px;
+
+
+}
+
+nav ul li a{
+	color: white;
+	text-decoration: none;
+
+
+}
+
+#nav{
+	font-family: "Montserrat";
+
+
+}
+.divider{
+	
+	height: 7px;
+}
+.homered{
+	background-color:  #808080;
+	padding: 27px 10px 36px 10px;
+}
+.homeblack:hover{
+	font-size:25px;
+	padding:  27px 10px 19px 10px;
+
+}
+
+.signupbox
+{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 80px 40px;
+	width: 550px;
+	height: 600px;
+	box-sizing: border-box;
+	background:rgba(0,0,0,.5);
+}
+
+.user{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: calc(-220px/2);
+	left: calc(50% - 90px);
+}
+
+h2{
+	margin-top: -35px;
+	padding: 0px 0px 20px;
+	color: #efed40;
+	text-align: center;
+}
+
+
+
+.signupbox input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.signupbox input[type="text"],
+.signupbox input[type="password"]{
+
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 30px;
+	color: #fff;
+	font-family: "Oswald";
+	font-size: 20px;
+}
+
+::placeholder
+{
+	color: rgba(255,255,255,.6);
+}
+
+.signupbox input[type="submit"]
+{
+	background-color: #00e673;
+	color: black;
+	border:none;
+	height: 20px;
+	font-size:1.4em;
+	padding: 0 1em;
+	cursor: pointer;
+	outline: none;
+	font-family: 'Raleway', sans-serif;
+	font-weight:900;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 20px;
+}
+
+.signupbox input[type="submit"]:hover
+{
+	background:#00e673;
+	color:#262626;
+}
+
+.signupbox a{
+	color:#fff;
+	font-size:14px;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+h3{ 
+	
+	height: 30px;
+	color: #fff;
+	font-family: "Oswald";
+	font-size: 20px;
+
+}
+
+#create-account{
+	background-color: #efed40;
+	color: black;
+	border:none;
+	height: 50px;
+	font-size:1.4em;
+	padding: 0 1em;
+	cursor: pointer;
+	outline: none;
+	font-family: 'Oswald', sans-serif;
+	font-weight:900;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 20px;
+}
