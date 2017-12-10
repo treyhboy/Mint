@@ -1,0 +1,121 @@
+
+.logo
+{
+    text-align: center;
+    letter-spacing: 2px;
+    color: #0F0E0E;
+    margin-top: 16px;
+    font-size: 40px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.he
+{
+    text-align: center;
+    color: #0F0E0E;
+    font-size: 18px;
+    margin-top: 24px;
+    text-decoration: none;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+
+}
+.he:hover{
+
+    text-align: center;
+    color: #0F0E0E;
+    margin-top: 24px;
+    text-decoration: none;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #14CC60;
+
+
+}
+.main {
+    display: flex;
+    min-height: 100vh;
+}
+.le
+{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin-top: 25px;
+    min-height:650px;
+}
+.le2
+{
+    display:flex;
+    margin-top: 15px;
+    height:650px;
+    margin-left: -40px;
+    border-left: 2px solid #F6F6F6;
+
+}
+.lec
+{
+    display:flex;
+    margin-top: 10px;
+    height:400px;
+    margin-left: -40px;
+}
+.ro
+{
+    width: 280px;
+    height: 60px;
+    border-radius: 3px;
+    background-color:#F7F7F7 ;
+    justify-content: center;
+    margin-right: 11px;
+}
+.ro1
+{
+    margin-top: 10px;
+    border-radius: 3px;
+    width: 280px;
+    height: 60px;
+}
+.hi
+{
+
+}
+.head
+{
+    background-color: #F7F7F7;
+    height: 80px;
+}
+.el
+{
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding: 8px;
+    margin-top: 5px;
+    text-align: center;
+}
+.els
+{
+    font-size: 16px;
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 8px;
+}
+.els1
+{
+    font-size: 10px;
+    margin-left: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.el1
+{
+    font-size: 18px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+    padding: 10px;
+    text-align: center;
+    color: #14CC60;
+}

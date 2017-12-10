@@ -1,0 +1,27 @@
+{
+  "name": "ftrack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/treyhboy/Ftrack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/treyhboy/Ftrack/issues"
+  },
+  "homepage": "https://github.com/treyhboy/Ftrack#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.4.2",
+    "sequelize": "^4.22.0",
+    "socket.io": "^2.0.4"
+  }
+}
