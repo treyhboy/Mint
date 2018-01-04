@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Details</title>
+    <link rel="stylesheet" href="js/bootstrap-4.0.0-beta-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="js/bootstrap-4.0.0-beta-dist/css/bootstrap-grid.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/main1.css">
+</head>
+<body>
+<header class="head">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2"><h1 class="logo"><i class="ion-paper-airplane"
+                                                   style="color: #14CC60;margin-right:5px "></i>Mint</h1></div>
+            <div class="col" style="padding-right: 30px">
+                <ul class="nav justify-content-center hi">
+                    <li class="nav-item " id="overview"><a class="nav-link he" href="#">Overview</a></li>
+                    <li class="nav-item " style="margin-left: 45px;" id="trans"><a class="nav-link he" href="#">
+                        Credits</a></li>
+                    <li class="nav-item " style="margin-left: 45px;" id="bills"><a class="nav-link he" href="#">Spendings </a>
+                    </li>
+                    <li class="nav-item " style="margin-left: 45px;" id="spend"><a class="nav-link he" href="#">
+                        Reminders</a></li>
+                    <li class="nav-item " style="margin-left: 45px;" id="invest"><a class="nav-link he" href="#">
+                        Investments</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container-fluid col-4 col-md-offset-4 mt-5">
+        <form class="form-horizontal" role="form">
+            <fieldset>
+                <legend class="text-success">Account details</legend>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">First name</label>
+                    <div class="col-sm-10">
+                        <input type="text" placeholder="Bill" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Last name</label>
+                    <div class="col-sm-10">
+                        <input type="text" placeholder="Gates" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Email address</label>
+                    <div class="col-sm-10">
+                        <input type="email" placeholder="bill@apple.com" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Mobile</label>
+                    <div class="col-sm-4">
+                        <input type="tel" placeholder="+328745286" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Bank number</label>
+                    <div class="col-sm-10">
+                        <input type="text" placeholder="2" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-default">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-danger">Change password</button> <!--change password on different page-->
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
+
+<style>
+    .col-center{
+        float: none;
+        margin: 0 auto;
+    }
+</style>
