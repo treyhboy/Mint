@@ -23,7 +23,7 @@ header
 {
     text-align: left;
     letter-spacing: 2px;
-    color: #0F0E0E;
+    color: rgb(53, 53, 53);
     /* margin-top: 3px; */
     font-size: 50px;
     font-family: 'Indie Flower', cursive;
@@ -52,10 +52,15 @@ header
 }
 .but
 {
-    background-color: #40BAF5;
+    background-color: #F68D27;
+    font-family: 'Roboto', sans-serif;
     text-align: end;
     margin-top: 7px;
     color: white;
+}
+
+.but:hover {
+    background-color: rgb(170, 86, 2);
 }
 .qou
 {
@@ -70,13 +75,17 @@ header
 
 .but1
 {
-    background-color: #F68D27;
+    background-color:#F68D27;
     font-size: 20px;
     text-align: end;
     font-family: 'Roboto', sans-serif;
     margin-top: 30px;
     color: white;
 }
+.but1:hover {
+    background-color: rgb(170, 86, 2);
+}
+
 .cont h2{
     margin-top: 20px;
 }
@@ -166,8 +175,11 @@ header
 #contact-head {
     color: white;
     font-family: 'Roboto', sans-serif;
-    padding-top: 50px;
-
+    padding-top: 40px;
+    margin-bottom: 40px;
+    border-bottom: .5px solid white;
+    display: inline-block;
+      
 }
 
 #nav {
