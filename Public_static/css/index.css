@@ -186,4 +186,8 @@ header
     justify-content: flex-end;
 }
 
+.description {
+    font-size: 16px;
+}
+
 
