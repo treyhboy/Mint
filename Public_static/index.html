@@ -9,12 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="js/bootstrap-4.0.0-beta-dist/css/bootstrap.css">
     <link rel="stylesheet" href="js/bootstrap-4.0.0-beta-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Source+Sans+Pro" rel="stylesheet">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/index.js"></script>
 
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+
 </head>
 
 <body>
@@ -29,7 +31,7 @@
                         <i class="ion-paper-airplane" style="color: #14CC60"></i>Mint</h1>
                 </div>
                 <div class="col">
-                    <ul class="nav justify-content-center">
+                    <ul class="nav" id="nav">
                         <li class="nav-item ">
                             <a class="nav-link he" href="#se">About</a>
                         </li>
@@ -55,7 +57,7 @@
             <div class="row">
                 <div class="col-2"></div>
                 <div class="col">
-                    <h1 class="qoum" style="color:#e2e6ea">Manage your money like never before</h1>
+                    <h1 class="qoum" id="head">Manage your money like never before</h1>
                 </div>
                 <div class="col-2"></div>
             </div>
@@ -83,7 +85,7 @@
         <br>
         <h2 style="margin-top: -10px">Stay up-to-date as it happens</h2>
         <div class="mini-highlight-content group-highlight-content-left field-group-div col-md-4 col-sm-4">
-            <div class="field field-name-field-block-text field-type-text-long field-label-hidden " style="margin-top: 100px;margin-left: 100px ">
+            <div class="field field-name-field-block-text field-type-text-long field-label-hidden " style="margin-top: 100px; margin-left: 20px;">
                 <p style="font-size: larger ">Mint tracks and categorizes your information. From your bank accounts and credit cards to retirement accounts
                     and more -we’ll crunch the numbers as they happen so you know where you stand.</p>
             </div>
@@ -96,7 +98,7 @@
         <h2>Easy Budgeting</h2>
         <div class="fieldable-panels-pane">
             <div class="mini-highlight-content group-highlight-content-right field-group-div col-md-4 col-md-push-8 col-sm-4 col-sm-push-8">
-                <div class="field field-name-field-block-text field-type-text-long field-label-hidden " style="font-size: larger;margin-top: 100px;margin-left: 100px">
+                <div class="field field-name-field-block-text field-type-text-long field-label-hidden " style="font-size: larger;margin-top: 100px; margin-left: 20px;">
                     <p>It’s free and easy to get started, and we connect to almost every Indian financial institution connected
                         to the internet. In just minutes, you’ll see where your money is going and get ideas on how to stretch
                         it farther.</p>
@@ -107,9 +109,7 @@
                     <div class="field-items">
                         <div class="field-item even">
                             <picture>
-
-
-                                <img src="img/your-financial-life-in-one-place_2.png" height="300" style="margin-left: 650px; margin-top: -250px">
+                                <img src="img/your-financial-life-in-one-place_2.png" height="300" style="margin-left: 580px; margin-top: -250px">
                             </picture>
                         </div>
                     </div>
@@ -120,11 +120,6 @@
     <section class="contact-box" id="con">
         <div>
             <h2 id="contact-head">Contact Us</h2>
-            <br>
-            <br>
-            <div class="row">
-            </div>
-            <br>
             <br>
             <div class="row">
                 <div class="col-1"> </div>
@@ -154,7 +149,7 @@
                         <li class="logo ">
                             <a class="nav-link " href="#">
                                 <h3 class="logo">
-                                    <i class="ion-social-twitter k4 k"></i>
+                                    <i id="twitter" class="ion-social-twitter k4 k"></i>
                                 </h3>
                             </a>
                         </li>
@@ -162,8 +157,6 @@
                 </div>
                 <div class="col-1"></div>
             </div>
-        </div>
-
 
     </section>
 

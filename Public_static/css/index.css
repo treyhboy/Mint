@@ -1,14 +1,19 @@
-h2 {
-    font-family: 'Prompt', sans-serif;
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(53, 53, 53);
 }
     
 header
 {
-    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)), url("../img/bg.jpg");
+    background-image: linear-gradient(rgba(164, 235, 185, 0.5),rgba(174, 244, 253, 0.5)), url("../img/bg.jpg");
     height: 100vh;
     background-attachment: fixed;
     background-position:top;
     background-size: cover;
+}
+
+#head {
+    color: rgb(53, 53, 53);
 }
 .hi
 {
@@ -19,7 +24,7 @@ header
     text-align: left;
     letter-spacing: 2px;
     color: #0F0E0E;
-    margin-top: 3px;
+    /* margin-top: 3px; */
     font-size: 50px;
     font-family: 'Indie Flower', cursive;
 }
@@ -68,7 +73,7 @@ header
     background-color: #F68D27;
     font-size: 20px;
     text-align: end;
-    font-family: 'Prompt', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-top: 30px;
     color: white;
 }
@@ -91,22 +96,25 @@ header
     background-color: #1b1e21;
     height: 450px;
 }
+
+.k1, .k2, .k3, .k4 {
+    margin-top: -50px;
+}
 .k1
 {
     text-align: center;
     color:#3B5998;
-    font-size: 40px;
-    margin-top: 4px;
+    font-size: 80px;
     text-decoration: none;
     word-spacing: 2px;
     letter-spacing: 1px;
+    width: 200px;
 }
 .k2
 {
     text-align: center;
     color: #e1306c;
-    font-size: 40px;
-    margin-top: 4px;
+    font-size: 80px;
     text-decoration: none;
     word-spacing: 2px;
     letter-spacing: 1px;
@@ -115,8 +123,7 @@ header
 {
     text-align: center;
     color: #6e5494;
-    font-size: 40px;
-    margin-top: 4px;
+    font-size: 80px;
     text-decoration: none;
     word-spacing: 2px;
     letter-spacing: 1px;
@@ -125,17 +132,16 @@ header
 {
     text-align: center;
     color: #1da1f2;
-    font-size: 40px;
-    margin-top: 4px;
+    font-size: 80px;
     text-decoration: none;
     word-spacing: 2px;
     letter-spacing: 1px;
+
 }
 .k:hover{
     text-align: center;
     color: #F7F7F7;
-    font-size: 40px;
-    margin-top: 4px;
+    font-size: 80px;
     text-decoration: none;
     word-spacing: 2px;
     letter-spacing: 1px;
@@ -159,6 +165,13 @@ header
 
 #contact-head {
     color: white;
-    font-family: 'Prompt', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 50px;
 
 }
+
+#nav {
+    justify-content: flex-end;
+}
+
+
