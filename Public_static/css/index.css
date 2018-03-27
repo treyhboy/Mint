@@ -2,7 +2,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     color: rgb(53, 53, 53);
 }
-    
+
 header
 {
     background-image: linear-gradient(rgba(164, 235, 185, 0.5),rgba(174, 244, 253, 0.5)), url("../img/bg.jpg");
@@ -86,8 +86,12 @@ header
     background-color: rgb(170, 86, 2);
 }
 
-.cont h2{
-    margin-top: 20px;
+.cont{
+    margin-top: 25px;
+}
+
+h2{
+    margin-top: 35px;
 }
 
 .cont
@@ -179,7 +183,7 @@ header
     margin-bottom: 40px;
     border-bottom: .5px solid white;
     display: inline-block;
-      
+
 }
 
 #nav {
