@@ -1,15 +1,22 @@
+html,
 body {
     font-family: 'Source Sans Pro', sans-serif;
     color: rgb(53, 53, 53);
+    height: 100%;
+    font-size: 100%;
 }
 
 header
 {
     background-image: linear-gradient(rgba(164, 235, 185, 0.5),rgba(174, 244, 253, 0.5)), url("../img/bg.jpg");
-    height: 100vh;
+    height: 100%;
     background-attachment: fixed;
     background-position:top;
     background-size: cover;
+}
+
+.ion-paper-airplane {
+    color: #14CC60;
 }
 
 #head {
@@ -25,9 +32,13 @@ header
     text-align: left;
     letter-spacing: 2px;
     color: rgb(53, 53, 53);
-    /* margin-top: 3px; */
     font-size: 50px;
     font-family: 'Indie Flower', cursive;
+    width: fit-content;
+    float: left;
+}
+.nav {
+    float: right;
 }
 
 .he
@@ -67,8 +78,17 @@ header
 .qou
 {
     text-align: center;
-    margin-top: 170px;
+    position: relative;
+    height: 100%;
 }
+.centerVH {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
 .qoum
 {
     font-size: 60px;
@@ -88,28 +108,59 @@ header
     background-color: rgb(170, 86, 2);
 }
 
-.cont{
-    margin-top: 25px;
+h2 {
+    padding: 35px 0px;
 }
 
-h2{
-    margin-top: 35px;
-}
-
-.cont
+.cont, 
+.cont1, 
+.cont2
 {
     text-align: center;
-    height: 450px;
+    height: 100%;
+    position: relative;
 }
-.cont1
-{   text-align: center;
+.cont1 {
     background-color: gainsboro;
-    height: 450px;
 }
-.cont2
-{   text-align: center;
+.cont2 {
     background-color: #1b1e21;
-    height: 450px;
+}
+
+.cont .section-img, 
+.cont1 .section-img, 
+.cont2 .section-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 70%;
+    height: auto;
+}
+
+.cont .row,
+.cont1 .row {
+    height: calc(100% - 112px);
+}
+
+.cont .description,
+.cont1 .description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cont .description-img img,
+.cont1 .description-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .k1, .k2, .k3, .k4 {
@@ -199,3 +250,11 @@ h2{
     padding-top: 10px;
 }
 
+.social {
+    width: 100%;
+    text-align: center;
+}
+
+.social a {
+    display: inline-block;
+}
