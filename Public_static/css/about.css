@@ -1,0 +1,198 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(53, 53, 53);
+}
+
+header
+{
+    background-image: linear-gradient(rgba(164, 235, 185, 0.5),rgba(174, 244, 253, 0.5)), url("../img/bg.jpg");
+    height: 75vh;
+    background-attachment: fixed;
+    background-position:top;
+    background-size: cover;
+}
+
+#head {
+    color: rgb(53, 53, 53);
+}
+.hi
+{
+    height: 60px;
+}
+.logo
+{
+    text-align: left;
+    letter-spacing: 2px;
+    color: rgb(53, 53, 53);
+    /* margin-top: 3px; */
+    font-size: 50px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.he
+{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 4px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+.he:hover{
+
+    text-align: center;
+    color: white;
+    margin-top: 4px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #14CC60;
+
+}
+.but
+{
+    background-color: #F68D27;
+    font-family: 'Roboto', sans-serif;
+    text-align: end;
+    margin-top: 7px;
+    color: white;
+}
+
+.but:hover {
+    background-color: rgb(170, 86, 2);
+}
+.qou
+{
+    text-align: center;
+    margin-top: 170px;
+}
+.qoum
+{
+    font-size: 60px;
+    color: white;
+    padding-top: 20vh;
+}
+
+.but1
+{
+    background-color:#F68D27;
+    font-size: 20px;
+    text-align: end;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
+    color: white;
+}
+.but1:hover {
+    background-color: rgb(170, 86, 2);
+}
+
+.cont{
+    margin-top: 25px;
+}
+
+h2{
+    margin-top: 35px;
+}
+
+.cont
+{
+    text-align: center;
+    height: 150px;
+}
+.cont1
+{   text-align: center;
+    background-color: gainsboro;
+    height: 450px;
+}
+.cont2
+{   text-align: center;
+    background-color: #1b1e21;
+    height: 450px;
+}
+
+.k1, .k2, .k3, .k4 {
+    margin-top: -50px;
+}
+.k1
+{
+    text-align: center;
+    color:#3B5998;
+    font-size: 80px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    width: 200px;
+}
+.k2
+{
+    text-align: center;
+    color: #e1306c;
+    font-size: 80px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+.k3
+{
+    text-align: center;
+    color: #6e5494;
+    font-size: 80px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+.k4
+{
+    text-align: center;
+    color: #1da1f2;
+    font-size: 80px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+
+}
+.k:hover{
+    text-align: center;
+    color: #F7F7F7;
+    font-size: 80px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+
+}
+
+.placeholders {
+    padding-bottom: 3rem;
+}
+.placeholder img {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.center-pills { display: inline-block; }
+
+.contact-box {
+    height: 300px;
+    text-align: center;
+    background-color: #1b1e21;
+}
+
+#contact-head {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    border-bottom: .5px solid white;
+    display: inline-block;
+
+}
+
+#nav {
+    justify-content: flex-end;
+}
+
+.description {
+    font-size: 18px;
+}
+
+
