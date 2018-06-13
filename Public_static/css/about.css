@@ -14,6 +14,7 @@ header
 
 #head {
     color: rgb(53, 53, 53);
+    font-family: 'Raleway', sans-serif;
 }
 .hi
 {
@@ -71,7 +72,7 @@ header
 {
     font-size: 60px;
     color: white;
-    padding-top: 20vh;
+    /*padding-top: 20vh; */
 }
 
 .but1
