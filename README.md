@@ -4,7 +4,7 @@ A barebones Node.js app using [Express 4](http://expressjs.com/).
 
 ## Running Locally
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Mysql](https://dev.mysql.com/downloads/mysql/) installed.
+Make sure you have [Node.js](http://nodejs.org/) and [MySQL](https://dev.mysql.com/downloads/mysql/) installed.
 
 ```sh
 git clone https://github.com/treyhboy/Mint.git # or clone your own fork
