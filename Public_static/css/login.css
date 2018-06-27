@@ -2,26 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
-
-
-
-
-
-
-body{
-	margin: 0;
-	padding: 0;
-	background-image:url("bg.jpg");
-	background-size: cover;
-	font-family: sans-serif;
-}
-
 header{
-
-	color: white;
-	padding: 8px 0px 6px 40px;
-	height: 70px;
-
+    height: 75vh;
 }
 
 header h1{
@@ -34,35 +16,6 @@ header h1{
 
 }
 
-nav ul{
-	display: inline;
-	padding: 0px;
-	float: left;
-
-}
-
-nav ul li{
-	display: inline-block;
-	list-style-type: none;
-	color: white;
-	float: left;
-	margin-left: 12px;
-
-
-}
-
-nav ul li a{
-	color: white;
-	text-decoration: none;
-
-
-}
-
-#nav{
-	font-family: "Montserrat";
-
-
-}
 .divider{
 
 	height: 7px;
@@ -166,11 +119,4 @@ h2{
 
 	text-decoration: none;
 
-}
-.but
-{
-    background-color: #40BAF5;
-    text-align: end;
-    margin-top: 7px;
-    color: black;
 }

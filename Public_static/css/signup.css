@@ -2,12 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
-
-
-
-
-
-
 body{
 	margin: 0;
 	padding: 0;
@@ -17,7 +11,7 @@ body{
 }
 
 header{
-
+	background-image: none;
 	color: white;
 	padding: 8px 0px 6px 4px;
 	height: 60px;
@@ -177,4 +171,3 @@ h3{
 	font-size: 20px;
 
 }
-

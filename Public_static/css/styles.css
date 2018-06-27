@@ -1,0 +1,177 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(53, 53, 53);
+}
+
+header
+{
+    background-image: linear-gradient(rgba(164, 235, 185, 0.5),rgba(174, 244, 253, 0.5)), url("../img/bg.jpg");
+    height: 100vh;
+    background-attachment: fixed;
+    background-position:top;
+    background-size: cover;
+}
+
+#head {
+    color: rgb(53, 53, 53);
+    font-family: 'Raleway', sans-serif;
+}
+.hi
+{
+    height: 60px;
+}
+.logo
+{
+    text-align: left;
+    letter-spacing: 2px;
+    color: rgb(53, 53, 53);
+    margin-top: 3px;
+    font-size: 50px;
+    font-family: 'Indie Flower', cursive;
+}
+.col{
+    padding-right: 8.333%
+}
+.he
+{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 4px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    font-family: 'PT Sans', sans-serif;
+}
+.he:hover{
+
+    text-align: center;
+    color: white;
+    margin-top: 4px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #14CC60;
+
+}
+.but
+{
+    background-color: #F68D27;
+    font-family: 'Roboto', sans-serif;
+    text-align: end;
+    margin-top: 7px;
+    color: white;
+}
+
+.but:hover {
+    background-color: rgb(170, 86, 2);
+}
+.qou
+{
+    text-align: center;
+    margin-top: 170px;
+}
+.qoum
+{
+    font-size: 60px;
+    color: white;
+    padding-top: 20vh;
+}
+
+.but1
+{
+    background-color:#F68D27;
+    font-size: 20px;
+    text-align: end;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
+    color: white;
+}
+.but1:hover {
+    background-color: rgb(170, 86, 2);
+}
+h2{
+    margin-top: 35px;
+}
+div{
+    align-items: center;
+}
+.lklogo
+{
+    text-align: center;
+    letter-spacing: 2px;
+    color: rgb(53, 53, 53);
+    margin-top: 3px;
+    font-size: 50px;
+    font-family: 'Indie Flower', cursive;
+}
+.lk {
+    margin-top: -50px;
+    text-align: center;
+    font-size: 60px;
+    text-decoration: none;
+    word-spacing: 2px;
+    letter-spacing: 0px;
+    width: 200px;
+    height: 86px;
+}
+.lk-facebook
+{
+    color:#3B5998;
+}
+.lk-instagram
+{
+    color: #e1306c;
+}
+.lk-github
+{
+    color: #6e5494;
+}
+.lk-twitter
+{
+    color: #1da1f2;
+}
+.lk:hover{
+    background-color: #14CC60;
+	color: #b9f8d4;
+    text-decoration: none;
+}
+
+.placeholders {
+    padding-bottom: 3rem;
+}
+.placeholder img {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.center-pills { display: inline-block; }
+
+.contact-box {
+    height: 300px;
+    text-align: center;
+    background-color: #b9f8d4;
+}
+
+#contact-head {
+    color: #14CC60;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+#nav {
+    justify-content: center;
+}
+.navbar{
+    padding-top: 10px;
+}
+.nav-link{
+    background-color: #8bf4b7;
+    height: 101px;
+}
+.nav a{
+    padding: 10px 0px;
+}
+.nav li{
+    align-items: center;
+}

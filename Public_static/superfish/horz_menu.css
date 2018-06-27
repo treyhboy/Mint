@@ -1,0 +1,93 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(53, 53, 53);
+}
+
+/* link styles */
+.nav a {
+	text-decoration: none;
+	display: block;
+	padding: 2px 7px 2px 10px;
+	color: #14CC60;
+	width: 9em;
+    font-size: 18px;
+    text-align: center;
+	font-weight: bold;
+	background-color: #b9f8d4;
+  margin: 0;
+}
+
+.nav li li a {
+  /* style for links on pop-up menus */
+}
+
+.nav li li li a {
+	/* style for second level menu links */
+}
+
+.nav a:hover{
+	background-color: #14CC60;
+	color: #b9f8d4;
+}
+
+/* main nav bar */
+.nav {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+/* all list items */
+.nav  li {
+	margin:0 !important;
+	padding:0 !important;
+	list-style: none; /* remove bullets */
+	float: left; /* place buttons side by side */
+  position: relative;
+}
+
+
+/* pop-up subnav */
+.nav ul {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+  left: 0;
+  top: 1.72em; /* change when you change height of links */
+	display: none;
+}
+
+
+/* list items in pop-up subnav */
+.nav ul li {
+	float: none; /* so links line up one above the other for drop-downs */
+}
+
+/*3rd level menu position*/
+.nav ul ul {
+	position: absolute;
+  left: 10.8em; /* change when you change width of links */
+  top: -1px;
+  z-index: 99;
+  border-top: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+}
+
+.nav ul ul li {
+	z-index: 100;
+}
+
+
+
+/* look for buttons that have menus */
+.nav .sub {
+	background-image: url(../superfish/images/arrow_down.png);
+  background-repeat:no-repeat;
+  background-position: 2px 3px;
+}
+
+.nav .subsub {
+	background-image: url(../superfish/images/arrow_left.png);
+  background-repeat: no-repeat;
+  background-position: 4px 7px;
+}
