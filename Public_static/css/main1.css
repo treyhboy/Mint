@@ -1,10 +1,15 @@
-html {
+/**************************************************
+* MOBILE SPECIFIC (AND ALSO GLOBAL) STYLES
+**************************************************/
+html 
+{
     height: 100%;
     box-sizing: border-box;
 }
 *,
 *:before,
-*:after {
+*:after 
+{
     box-sizing: inherit;
 }
 
@@ -18,29 +23,6 @@ html {
     font-family: 'Indie Flower', cursive;
 }
 
-.he
-{
-    text-align: center;
-    color: #0F0E0E;
-    font-size: 18px;
-    margin-top: 24px;
-    text-decoration: none;
-    word-spacing: 3px;
-    letter-spacing: 1px;
-
-}
-.he:hover{
-
-    text-align: center;
-    color: #0F0E0E;
-    margin-top: 24px;
-    text-decoration: none;
-    word-spacing: 3px;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #14CC60;
-
-
-}
 .main {
     display: flex;
     min-height: 100vh;
@@ -127,4 +109,33 @@ html {
     padding: 10px;
     text-align: center;
     color: #14CC60;
+}
+
+/**************************************************
+* DESKTOP SPECIFIC STYLES
+**************************************************/
+@media screen and (min-width: 800px) 
+{
+    .he
+    {
+        text-align: center;
+        color: #0F0E0E;
+        font-size: 18px;
+        margin-top: 24px;
+        text-decoration: none;
+        word-spacing: 3px;
+        letter-spacing: 1px;
+
+    }
+
+    .he:hover{
+
+        text-align: center;
+        color: #0F0E0E;
+        margin-top: 24px;
+        text-decoration: none;
+        word-spacing: 3px;
+        letter-spacing: 1px;
+        border-bottom: 2px solid #14CC60;
+    }
 }
