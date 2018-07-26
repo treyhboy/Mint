@@ -47,11 +47,13 @@ nav
 {
     display: none;
 }
+/*
 .main {
     max-width: 100%;
     display: flex;
     min-height: 100vh;
 }
+*/
 .le
 {
     display: flex;
@@ -71,6 +73,7 @@ nav
     border-left: 2px solid #F6F6F6;
 
 }
+
 .lec
 {
     display:flex;
@@ -78,6 +81,7 @@ nav
     height:400px;
     margin-left: -40px;
 }
+/**/
 .ro
 {
     width: 280px;
