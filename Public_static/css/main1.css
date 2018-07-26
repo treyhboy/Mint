@@ -72,9 +72,9 @@ html
 {
 
 }
-.head
+nav
 {
-    background-color: #F7F7F7;
+    background-color: #F7F7F7 !important;
     height: 80px;
 }
 .el
