@@ -1,5 +1,5 @@
 /**************************************************
-* MOBILE SPECIFIC (AND ALSO GLOBAL) STYLES
+* STYLES COMMON AMONG ALL VIEWPORTS
 **************************************************/
 html 
 {
@@ -12,6 +12,12 @@ html
     box-sizing: inherit;
 }
 
+nav
+{
+    background-color: #F7F7F7 !important;
+    min-height: 80px;
+    width: 100%;
+}
 .logo
 {
     text-align: center;
@@ -21,8 +27,28 @@ html
     font-size: 40px;
     font-family: 'Indie Flower', cursive;
 }
+.nav-item
+{
+    border-bottom: 2px solid rgba(0,0,0,0);
+    text-align: center;
+    color: #0F0E0E;
+    font-size: 18px;
+    margin-top: 24px;
+    text-decoration: none;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+.nav-item:hover
+{
+    border-bottom: 2px solid #14CC60;
+}
 
+#back-button
+{
+    text-align: center;
+}
 .main {
+    max-width: 100%;
     display: flex;
     min-height: 100vh;
 }
@@ -72,11 +98,6 @@ html
 {
 
 }
-nav
-{
-    background-color: #F7F7F7 !important;
-    height: 80px;
-}
 .el
 {
     font-size: 18px;
@@ -115,27 +136,15 @@ nav
 **************************************************/
 @media screen and (min-width: 992px) 
 {
-    .he
+    .nav-item
     {
-        border-bottom: 2px solid rgba(0,0,0,0);
-        text-align: center;
-        color: #0F0E0E;
-        font-size: 18px;
-        margin-top: 24px;
-        text-decoration: none;
-        word-spacing: 3px;
-        letter-spacing: 1px;
-
+        margin-left: 45px;
     }
 
-    .he:hover{
-
-        text-align: center;
-        color: #0F0E0E;
-        margin-top: 24px;
-        text-decoration: none;
-        word-spacing: 3px;
-        letter-spacing: 1px;
-        border-bottom: 2px solid #14CC60;
+    #back-button
+    {
+        margin-right:30px;
+        margin-top: -55px;
+        text-align: right;
     }
 }

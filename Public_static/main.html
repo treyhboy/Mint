@@ -16,37 +16,47 @@
     <script src="js/main.js"></script>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand col-2" href="#"><h1 class="logo"><i class="ion-paper-airplane" style="color: #14CC60;margin-right:5px "></i>Mint</h1></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarText">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="col" style="padding-right: 5px">
         <ul class="navbar-nav mr-auto justify-content-center hi">
             <li class="nav-item" id="overview">
                 <a class="nav-link he" href="#">Overview</a>
             </li>
-            <li class="nav-item" style="margin-left: 35px;" id="trans">
+            <li class="nav-item" id="trans">
                 <a class="nav-link he" href="#">Transaction</a>
              </li>
-            <li class="nav-item" style="margin-left: 45px;" id="spend">
+            <li class="nav-item" id="spend">
                 <a class="nav-link he" href="#">Spendings</a>
             </li>
-            <li class="nav-item" style="margin-left: 45px;" id="rem">
+            <li class="nav-item" id="rem">
                 <a class="nav-link he" href="#">Reminders</a>
             </li>
-            <li class="nav-item" style="margin-left: 45px;" id="invest">
+            <li class="nav-item" id="invest">
                 <a class="nav-link he" href="#">Investments</a>
             </li>
         </ul>
-        <div style="margin-right:30px; margin-top: -55px; text-align: right">
+        <div id="back-button">
             <a href="http://localhost:3100/"><i class="ion-arrow-left-b" style="font-size:30px;"></i></a>
         </div>
         <!--<div style="margin-top: 30px;margin-right: 10px "><i class="ion-arrow-left-b" style="size:60px"></i></div>-->
     </div>
   </div>
 </nav>
+<!-- jQuery to collapse navbar on item click -->
+<script>
+    $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
+</script>
+
 
 <div class="row main">
     <div class="col-lg-3 le" style="z-index: 1">
