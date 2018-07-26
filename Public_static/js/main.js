@@ -69,7 +69,7 @@ const setrem = function () {
     let box  = $('#box');
     box.empty();
     box.append(`
-        <div class="card" style="max-height: 100%;width:100%;margin-left: 5px;margin-top: 20px">
+        <div class="card" style="max-height: 100%;width:100%;margin-left: 5px;margin-top: 20px;margin-right: 5px">
             <div class="card-body lec" style="margin-left: 190px">
         <form  style="height: 100%;width: 100%">
             <div class="alert alert-danger" role="alert" style="text-align: center;width: 300px;margin-left: 150px;margin-bottom: 25px">
@@ -169,101 +169,101 @@ const crtran =  function () {
     box.append(`
         <div class="card" style="height: 500px;margin-left: 5px;margin-top: 20px">
             <div class="card-body lec" style="margin-left: 127px">
-        <form >
-            <div class="alert alert-success" role="alert" style="text-align: center;width: 300px;margin-left: 220px;margin-bottom: 25px">
-                Transaction
-            </div>
-
-            <label style="margin-top: 20px">Type</label>
-            <div class="form-check" style="margin-top: 10px">
-
-                <label class="form-check-label" id="spen">
-                    <input type="radio" value="Spending" style="margin-left: 10px" name="cp" class="f2">
-                    &nbsp;&nbsp;Spendings
-                </label>
-
-                <label class="form-check-label " id="inv">
-                    <input type="radio" value="Investment" style="margin-left: 20px" name="cp" class="f2"  >
-                    &nbsp;Investment
-                </label>
-
-            </div>
-
-            <label style="margin-top: 15px">Mode</label>
-            <div class="form-check" style="margin-top: 10px">
-
-                <label class="form-check-label">
-                    <input type="radio" value="cash" style="margin-left: 10px" name="cd" class="f1">
-                    &nbsp;&nbsp;Cash
-                </label>
-                <label class="form-check-label ">
-                    <input type="radio" value="card" style="margin-left: 40px" class="f1" name="cd">
-                    &nbsp;&nbsp;Card
-                </label>
-
-                <label class="form-check-label ">
-                    <input type="radio" value="online" style="margin-left: 40px" class="f1" name="cd">
-                    &nbsp;&nbsp;Online
-                </label>
-
-            </div>
-            <div style="margin-top: 20px">
-             <label>Amount</label>
-                <div class="col-lg-6">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Enter Amount" id="amt" style="margin-top: 12px" aria-label="Text input with radio button">
+                <form >
+                    <div class="alert alert-success" role="alert" style="text-align: center;width: 300px;margin-left: 220px;margin-bottom: 25px">
+                        Transaction
                     </div>
-            </div>
-            </div>
+
+                    <label style="margin-top: 20px">Type</label>
+                    <div class="form-check" style="margin-top: 10px">
+
+                        <label class="form-check-label" id="spen">
+                            <input type="radio" value="Spending" style="margin-left: 10px" name="cp" class="f2">
+                            &nbsp;&nbsp;Spendings
+                        </label>
+
+                        <label class="form-check-label " id="inv">
+                            <input type="radio" value="Investment" style="margin-left: 20px" name="cp" class="f2"  >
+                            &nbsp;Investment
+                        </label>
+
+                    </div>
+
+                    <label style="margin-top: 15px">Mode</label>
+                    <div class="form-check" style="margin-top: 10px">
+
+                        <label class="form-check-label">
+                            <input type="radio" value="cash" style="margin-left: 10px" name="cd" class="f1">
+                            &nbsp;&nbsp;Cash
+                        </label>
+                        <label class="form-check-label ">
+                            <input type="radio" value="card" style="margin-left: 40px" class="f1" name="cd">
+                            &nbsp;&nbsp;Card
+                        </label>
+
+                        <label class="form-check-label ">
+                            <input type="radio" value="online" style="margin-left: 40px" class="f1" name="cd">
+                            &nbsp;&nbsp;Online
+                        </label>
+
+                    </div>
+                    <div style="margin-top: 20px">
+                     <label>Amount</label>
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter Amount" id="amt" style="margin-top: 12px" aria-label="Text input with radio button">
+                            </div>
+                    </div>
+                    </div>
 
 
-            <button type="button" id="submit"  class="btn btn-primary" style="margin-top: 40px;margin-left: 330px">Submit</button>
-        </form>
+                    <button type="button" id="submit"  class="btn btn-primary" style="margin-top: 40px;margin-left: 330px">Submit</button>
+                </form>
 
-        <div style="margin-top: 100px;margin-left: -30px">
-            <label style="margin-left: 10px">Description</label>
-            <div class="col-lg-9" id="desc">
-                <div class="form-check" style="margin-top: 20px">
+                <div style="margin-top: 100px;margin-left: -30px">
+                    <label style="margin-left: 10px">Description</label>
+                    <div class="col-lg-9" id="desc">
+                        <div class="form-check" style="margin-top: 20px">
 
-                    <label class="form-check-label" style="margin-top: 1px">
-                        <input type="radio" value="Food"  name="cb" class="f3">
-                        &nbsp;&nbsp;Food & Drinks
-                    </label>
-                    <label class="form-check-label ">
-                        <input type="radio" value="Bills" name="cb" style="margin-left: 10px" class="f3">
-                        &nbsp;&nbsp;Bills
-                    </label>
+                            <label class="form-check-label" style="margin-top: 1px">
+                                <input type="radio" value="Food"  name="cb" class="f3">
+                                &nbsp;&nbsp;Food & Drinks
+                            </label>
+                            <label class="form-check-label ">
+                                <input type="radio" value="Bills" name="cb" style="margin-left: 10px" class="f3">
+                                &nbsp;&nbsp;Bills
+                            </label>
 
-                    <label class="form-check-label " style="margin-top: 10px">
-                        <input type="radio" value="Salary" name="cb" style="margin-left: 1px" class="f3">
-                        &nbsp;&nbsp;Salary
-                    </label>
+                            <label class="form-check-label " style="margin-top: 10px">
+                                <input type="radio" value="Salary" name="cb" style="margin-left: 1px" class="f3">
+                                &nbsp;&nbsp;Salary
+                            </label>
 
-                    <label class="form-check-label">
-                        <input type="radio" value="Interest" name="cb" style="margin-left: 50px" class="f3">
-                        &nbsp;Interest
-                    </label>
-                    <label class="form-check-label " style="margin-top: 10px" >
-                        <input type="radio" value="Shopping" style="margin-left: 1px" name="cb" class="f3">
-                        &nbsp;&nbsp;Shoppings
-                    </label>
+                            <label class="form-check-label">
+                                <input type="radio" value="Interest" name="cb" style="margin-left: 50px" class="f3">
+                                &nbsp;Interest
+                            </label>
+                            <label class="form-check-label " style="margin-top: 10px" >
+                                <input type="radio" value="Shopping" style="margin-left: 1px" name="cb" class="f3">
+                                &nbsp;&nbsp;Shoppings
+                            </label>
 
-                    <label class="form-check-label ">
-                        <input type="radio" value="Fuel" style="margin-left: 35px" name="cb" class="f3">
-                        &nbsp;&nbsp;Fuel
-                    </label>
+                            <label class="form-check-label ">
+                                <input type="radio" value="Fuel" style="margin-left: 35px" name="cb" class="f3">
+                                &nbsp;&nbsp;Fuel
+                            </label>
 
-                    <label class="form-check-label" style="margin-top: 10px">
-                        <input type="radio" value="Grocery" style="margin-left: 1px" name="cb" class="f3">
-                        &nbsp;&nbsp;Grocery
-                    </label>
-                    <label class="form-check-label ">
-                        <input type="radio" value="Misc" style="margin-left: 30px" name="cb" class="f3">
-                        &nbsp;&nbsp;Misc
-                    </label>
+                            <label class="form-check-label" style="margin-top: 10px">
+                                <input type="radio" value="Grocery" style="margin-left: 1px" name="cb" class="f3">
+                                &nbsp;&nbsp;Grocery
+                            </label>
+                            <label class="form-check-label ">
+                                <input type="radio" value="Misc" style="margin-left: 30px" name="cb" class="f3">
+                                &nbsp;&nbsp;Misc
+                            </label>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
             </div>
         </div>
 `)
