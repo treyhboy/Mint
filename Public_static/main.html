@@ -5,34 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
 
+    <script src="js/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="js/bootstrap-4.0.0-beta-dist/css/bootstrap.css">
     <link rel="stylesheet" href="js/bootstrap-4.0.0-beta-dist/css/bootstrap-grid.min.css">
+    <script src="js/bootstrap-4.0.0-beta-dist/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="css/main1.css">
-    <script src="js/jquery-3.2.1.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
-<header class="head">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-2"> <h1 class="logo"><i class="ion-paper-airplane" style="color: #14CC60;margin-right:5px "></i>Mint</h1></div>
-            <div class="col" style="padding-right: 5px">
-                <ul class="nav justify-content-center hi">
-                    <li class="nav-item " id ="overview" > <a class="nav-link he" href="#">Overview</a> </li>
-                    <li class="nav-item " style="margin-left: 35px;" id ="trans"><a class="nav-link he" href="#">Transaction</a> </li>
-                    <li class="nav-item " style="margin-left: 45px;" id="spend" ><a class="nav-link he" href="#">Spendings </a></li>
-                    <li class="nav-item " style="margin-left: 45px;" id="rem"><a class="nav-link he" href="#"> Reminders</a></li>
-                    <li class="nav-item "  style="margin-left: 45px;" id="invest"><a class="nav-link he" href="#"> Investments</a></li>
-                </ul>
-                <div style="margin-right:30px;margin-top: -55px;text-align: right"><a href="http://localhost:3100/"><i class="ion-arrow-left-b" style="font-size:30px;"></i></a></div>
-            </div>
-            <!--<div style="margin-top: 30px;margin-right: 10px "><i class="ion-arrow-left-b" style="size:60px"></i></div>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand col-2" href="#"><h1 class="logo"><i class="ion-paper-airplane" style="color: #14CC60;margin-right:5px "></i>Mint</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <div class="col" style="padding-right: 5px">
+        <ul class="navbar-nav mr-auto justify-content-center hi">
+            <li class="nav-item" id="overview">
+                <a class="nav-link he" href="#">Overview</a>
+            </li>
+            <li class="nav-item" style="margin-left: 35px;" id="trans">
+                <a class="nav-link he" href="#">Transaction</a>
+             </li>
+            <li class="nav-item" style="margin-left: 45px;" id="spend">
+                <a class="nav-link he" href="#">Spendings</a>
+            </li>
+            <li class="nav-item" style="margin-left: 45px;" id="rem">
+                <a class="nav-link he" href="#">Reminders</a>
+            </li>
+            <li class="nav-item" style="margin-left: 45px;" id="invest">
+                <a class="nav-link he" href="#">Investments</a>
+            </li>
+        </ul>
+        <div style="margin-right:30px; margin-top: -55px; text-align: right">
+            <a href="http://localhost:3100/"><i class="ion-arrow-left-b" style="font-size:30px;"></i></a>
         </div>
+        <!--<div style="margin-top: 30px;margin-right: 10px "><i class="ion-arrow-left-b" style="size:60px"></i></div>-->
     </div>
-</header>
+  </div>
+</nav>
+
 <div class="row main">
     <div class="col-lg-3 le" >
         <div class="row ro">
