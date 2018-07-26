@@ -45,7 +45,7 @@ nav
 
 #back-button
 {
-    text-align: center;
+    display: none;
 }
 .main {
     max-width: 100%;
@@ -143,6 +143,7 @@ nav
 
     #back-button
     {
+        display: inherit;
         margin-right:30px;
         margin-top: -55px;
         text-align: right;
