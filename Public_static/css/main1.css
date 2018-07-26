@@ -113,7 +113,7 @@ nav
 /**************************************************
 * DESKTOP SPECIFIC STYLES
 **************************************************/
-@media screen and (min-width: 1150px) 
+@media screen and (min-width: 992px) 
 {
     .he
     {
