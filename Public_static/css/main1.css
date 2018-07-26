@@ -117,6 +117,7 @@ nav
 {
     .he
     {
+        border-bottom: 2px solid rgba(0,0,0,0);
         text-align: center;
         color: #0F0E0E;
         font-size: 18px;
