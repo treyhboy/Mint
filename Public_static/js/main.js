@@ -69,78 +69,92 @@ const setrem = function () {
     let box  = $('#box');
     box.empty();
     box.append(`
-        <div class="card" style="max-height: 100%;width:100%;margin-left: 5px;margin-top: 20px;margin-right: 5px">
-            <div class="card-body lec" style="margin-left: 190px">
-        <form  style="height: 100%;width: 100%">
-            <div class="alert alert-danger" role="alert" style="text-align: center;width: 300px;margin-left: 150px;margin-bottom: 25px">
-                Reminder
-            </div>
-            <div style="margin-top: 10px;margin-left: 100px">
-            <label style="margin-left: -10px">Description</label>
-            <div class="col-lg-9" id="desc">
-                <div class="form-check" style="margin-top: 20px">
-
-                    <label class="form-check-label" style="margin-top: 1px">
-                        <input type="radio" value="Interest"  name="cb" class="f3">
-                        &nbsp;&nbsp;Interest
-                    </label>
-                    <label class="form-check-label ">
-                        <input type="radio" value="Electricity Bills" name="cb" style="margin-left: 10px" class="f3">
-                        &nbsp;&nbsp;Electricity Bills
-                    </label>
-                    <br>
-                    <label class="form-check-label " style="margin-top: 10px">
-                        <input type="radio" value="Fees" name="cb" style="margin-left: 1px" class="f3">
-                        &nbsp;&nbsp;Fees
-                    </label>
-
-                    <label class="form-check-label">
-                        <input type="radio" value="DTH Bills" name="cb" style="margin-left: 50px" class="f3">
-                        &nbsp;DTH Bills
-                    </label>
-                    <br>
-                    <label class="form-check-label " style="margin-top: 10px" >
-                        <input type="radio" value="Rent" style="margin-left: 1px" name="cb" class="f3">
-                        &nbsp;&nbsp;Rent                    </label>
-
-                    <label class="form-check-label ">
-                        <input type="radio" value="Phone Bills" style="margin-left: 35px" name="cb" class="f3">
-                        &nbsp;&nbsp;Phone Bills
-                    </label>
-                    <br>
-                    <label class="form-check-label" style="margin-top: 10px">
-                        <input type="radio" value="Water Bills" style="margin-left: 1px" name="cb" class="f3">
-                        &nbsp;&nbsp;Water Bills
-                    </label>
-                    <label class="form-check-label ">
-                        <input type="radio" value="EMIs" style="margin-left: 30px" name="cb" class="f3">
-                        &nbsp;&nbsp;EMIs
-                    </label>
+        <div class="card justify-content-center" style="margin-top: 20px;">
+            <div class="card-body justify-content-center">
+                <div class="row justify-content-center">
+                    <div class="col alert alert-success" role="alert" style="text-align: center; max-width: 300px; margin-bottom: 25px">
+                        Reminder
+                    </div>
                 </div>
-            </div>
-        </div>
-            <div style="margin-top: 20px;margin-left: 100px  ">
-             <label>Amount</label>
-                <div class="col-lg-6">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Enter Amount" id="amt" style="margin-top: 12px" aria-label="Text input with radio button">
-                    </div>
-            </div>
-            </div>
-        <div style="margin-top: 20px;margin-left: 100px  ">
-             <label>Last Date</label>
-                <div class="col-lg-6">
-                    <div class="input-group">
-                        <input type="date" class="form-control"  id="dat" style="margin-top: 12px" aria-label="Text input with radio button">
-                    </div>
-            </div>
-            </div>
 
+                <div class="row justify-content-center">
+                    <form>
+                        <div style="margin-top: 10px;">
+                            <label>Description</label>
+                            <div id="desc">
+                                <div class="form-check" style="margin-top: 20px">
 
-            <button type="button" id="submit"  class="btn btn-primary" style="margin-top: 40px;margin-left: 260px">Submit</button>
-        </form>
+                                    <label class="form-check-label" style="margin-top: 1px">
+                                        <input type="radio" value="Interest"  name="cb" class="f3">
+                                        &nbsp;&nbsp;Interest
+                                    </label>
+                                    <label class="form-check-label ">
+                                        <input type="radio" value="Electricity Bills" name="cb" style="margin-left: 10px" class="f3">
+                                        &nbsp;&nbsp;Electricity Bills
+                                    </label>
+                                    <br>
+                                    <label class="form-check-label " style="margin-top: 10px">
+                                        <input type="radio" value="Fees" name="cb" style="margin-left: 1px" class="f3">
+                                        &nbsp;&nbsp;Fees
+                                    </label>
 
-        
+                                    <label class="form-check-label">
+                                        <input type="radio" value="DTH Bills" name="cb" style="margin-left: 50px" class="f3">
+                                        &nbsp;DTH Bills
+                                    </label>
+                                    <br>
+                                    <label class="form-check-label " style="margin-top: 10px" >
+                                        <input type="radio" value="Rent" style="margin-left: 1px" name="cb" class="f3">
+                                        &nbsp;&nbsp;Rent                    </label>
+
+                                    <label class="form-check-label ">
+                                        <input type="radio" value="Phone Bills" style="margin-left: 35px" name="cb" class="f3">
+                                        &nbsp;&nbsp;Phone Bills
+                                    </label>
+                                    <br>
+                                    <label class="form-check-label" style="margin-top: 10px">
+                                        <input type="radio" value="Water Bills" style="margin-left: 1px" name="cb" class="f3">
+                                        &nbsp;&nbsp;Water Bills
+                                    </label>
+                                    <label class="form-check-label ">
+                                        <input type="radio" value="EMIs" style="margin-left: 30px" name="cb" class="f3">
+                                        &nbsp;&nbsp;EMIs
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row justify-content-center">
+                    <form>
+                        <div style="margin-top: 20px;">
+                            <label>Amount</label>
+                            <div class="col">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter Amount" id="amt" style="margin-top: 12px" aria-label="Text input with radio button">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row justify-content-center">
+                    <form>
+                        <div style="margin-top: 20px;">
+                            <label>Last Date</label>
+                            <div class="col">
+                                <div class="input-group">
+                                    <input type="date" class="form-control"  id="dat" style="margin-top: 12px" aria-label="Text input with radio button">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col"  style="text-align: center; margin: 10px">
+                                <button type="button" id="submit"  class="btn btn-primary" style="margin-top: 40px;">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 `)
@@ -293,21 +307,21 @@ const crtran =  function () {
         desc.append(`<div class="form-check" style="margin-top: 20px">
 
                     <label class="form-check-label" style="margin-top: 1px">
-                        <input type="radio" value="Shares" name="cb" class="f3">
+                        <input type="radio" value="Shares" name="cb" style="margin-left: 25px" class="f3">
                         &nbsp;&nbsp;Shares
                     </label>
                     <label class="form-check-label ">
-                        <input type="radio" value="Real Estate" name="cb" style="margin-left: 10px" class="f3">
+                        <input type="radio" value="Real Estate" name="cb" style="margin-left: 25px" class="f3">
                         &nbsp;&nbsp;Real Estate
                     </label>
 
                     <label class="form-check-label " style="margin-top: 10px">
-                        <input type="radio" value="FDs" name="cb" style="margin-left: 1px" class="f3">
+                        <input type="radio" value="FDs" name="cb" style="margin-left: 25px" class="f3">
                         &nbsp;&nbsp;FDs
                     </label>
 
                     <label class="form-check-label">
-                        <input type="radio" value="Policies" name="cb" style="margin-left: 50px" class="f3">
+                        <input type="radio" value="Policies" name="cb" style="margin-left: 25px" class="f3">
                         &nbsp;Policies
                     </label>
                 </div>`)
