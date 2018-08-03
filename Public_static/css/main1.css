@@ -1,4 +1,23 @@
+/**************************************************
+* STYLES COMMON AMONG ALL VIEWPORTS
+**************************************************/
+html 
+{
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after 
+{
+    box-sizing: inherit;
+}
 
+nav
+{
+    background-color: #F7F7F7 !important;
+    min-height: 80px;
+    width: 100%;
+}
 .logo
 {
     text-align: center;
@@ -8,9 +27,9 @@
     font-size: 40px;
     font-family: 'Indie Flower', cursive;
 }
-
-.he
+.nav-item
 {
+    border-bottom: 2px solid rgba(0,0,0,0);
     text-align: center;
     color: #0F0E0E;
     font-size: 18px;
@@ -18,24 +37,23 @@
     text-decoration: none;
     word-spacing: 3px;
     letter-spacing: 1px;
-
 }
-.he:hover{
-
-    text-align: center;
-    color: #0F0E0E;
-    margin-top: 24px;
-    text-decoration: none;
-    word-spacing: 3px;
-    letter-spacing: 1px;
+.nav-item:hover
+{
     border-bottom: 2px solid #14CC60;
-
-
 }
+
+#back-button
+{
+    display: none;
+}
+/*
 .main {
+    max-width: 100%;
     display: flex;
     min-height: 100vh;
 }
+*/
 .le
 {
     display: flex;
@@ -44,7 +62,7 @@
     align-items: center;
     flex-flow: column;
     margin-top: 25px;
-    min-height:650px;
+/*    min-height:650px;*/
 }
 .le2
 {
@@ -55,6 +73,7 @@
     border-left: 2px solid #F6F6F6;
 
 }
+
 .lec
 {
     display:flex;
@@ -62,6 +81,7 @@
     height:400px;
     margin-left: -40px;
 }
+/**/
 .ro
 {
     width: 280px;
@@ -81,11 +101,6 @@
 .hi
 {
 
-}
-.head
-{
-    background-color: #F7F7F7;
-    height: 80px;
 }
 .el
 {
@@ -118,4 +133,23 @@
     padding: 10px;
     text-align: center;
     color: #14CC60;
+}
+
+/**************************************************
+* DESKTOP SPECIFIC STYLES
+**************************************************/
+@media screen and (min-width: 992px) 
+{
+    .nav-item
+    {
+        margin-left: 45px;
+    }
+
+    #back-button
+    {
+        display: inherit;
+        margin-right:30px;
+        margin-top: -55px;
+        text-align: right;
+    }
 }

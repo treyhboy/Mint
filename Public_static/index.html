@@ -1,23 +1,25 @@
 <!doctype html>
-<html lang="">
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Ftrack</title>
+    <title>Mint About</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="js/bootstrap-4.0.0-beta-dist/css/bootstrap.css">
     <link rel="stylesheet" href="js/bootstrap-4.0.0-beta-dist/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Source+Sans+Pro" rel="stylesheet">
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="superfish/horz_menu.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower|Source+Sans+Pro">
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="superfish/superfish.js"></script>
+    <script type="text/javascript" src="superfish/site.js"></script>
+    <script type="text/javascript" src="js/about.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway">
 </head>
 
 <body>
@@ -26,25 +28,17 @@
         <![endif]-->
     <header>
         <div class="container-fluid hi">
-            <div class="row navbar">
+            <div class="row">
                 <div class="col-2">
                     <h1 class="logo">
                         <i class="ion-paper-airplane" style="color: #14CC60"></i>Mint</h1>
                 </div>
                 <div class="col">
                     <ul class="nav" id="nav">
-                        <li class="nav-item ">
-                            <a class="nav-link he" href="./about.html">About</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link he" href="#how_it_works"> How it Works</a>
-                        </li>
-                        <li class="nav-item " id="gs">
-                            <a class="nav-link he" href="#get_started"> Get Started </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link he" href="#con"> Contact </a>
-                        </li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="#how_it_works">How it Works</a></li>
+                        <li><a href="./signup.html">Get Started</a></li>
+                        <li><a href="#con">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-1" id="face">
@@ -79,7 +73,7 @@
             </div>
         </div>
     </header>
-    <section class="cont" id="about">
+    <section class="cont" id="how_it_works">
         <h2>See everything in one place</h2>
         <br>
         <div class="field field-name-field-block-text field-type-text-long field-label-hidden  container description">
@@ -126,37 +120,37 @@
     </section>
     <section class="contact-box" id="con">
         <div>
-            <h2 id="contact-head">Contact Us</h2>
+            <h2 class="col" id="contact-head">Contact Us</h2>
 
             <div class="row">
                 <div class="col-1"> </div>
                 <div class="col">
-                    <ul class="nav justify-content-center">
-                        <li class="logo ">
-                            <a class="nav-link " href="#">
-                                <h3 class="logo">
-                                    <i class="ion-social-facebook k1 k"></i>
+                    <ul class="nav" id="nav">
+                        <li class="lklogo">
+                            <a class="nav-link "href="#">
+                                <h3 class="lklogo">
+                                    <i class="ion-social-facebook lk lk-facebook"></i>
                                 </h3>
                             </a>
                         </li>
-                        <li class="logo ">
-                            <a class="nav-link " href="#">
-                                <h3 class="logo">
-                                    <i class="ion-social-instagram k2 k"></i>
+                        <li class="lklogo">
+                            <a class="nav-link "href="#">
+                                <h3 class="lklogo">
+                                    <i class="ion-social-instagram lk lk-instagram"></i>
                                 </h3>
                             </a>
                         </li>
-                        <li class="logo ">
-                            <a class="nav-link " href="#">
-                                <h3 class="logo">
-                                    <i class="ion-social-github k3 k"></i>
+                        <li class="lklogo">
+                            <a class="nav-link "href="#">
+                                <h3 class="lklogo">
+                                    <i class="ion-social-github lk lk-github"></i>
                                 </h3>
                             </a>
                         </li>
-                        <li class="logo ">
-                            <a class="nav-link " href="#">
-                                <h3 class="logo">
-                                    <i id="twitter" class="ion-social-twitter k4 k"></i>
+                        <li class="lklogo">
+                            <a class="nav-link "href="#">
+                                <h3 class="lklogo">
+                                    <i class="ion-social-twitter lk lk-twitter"></i>
                                 </h3>
                             </a>
                         </li>
