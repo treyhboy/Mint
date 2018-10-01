@@ -3,12 +3,11 @@ body {
     color: rgb(53, 53, 53);
 }
 
-header
-{
-    background-image: linear-gradient(rgba(164, 235, 185, 0.5),rgba(174, 244, 253, 0.5)), url("../img/bg.jpg");
+header {
+    background-image: linear-gradient(rgba(164, 235, 185, 0.5), rgba(174, 244, 253, 0.5)), url("../img/bg.jpg");
     height: 100vh;
     background-attachment: fixed;
-    background-position:top;
+    background-position: top;
     background-size: cover;
 }
 
@@ -16,12 +15,14 @@ header
     color: rgb(53, 53, 53);
     font-family: 'Raleway', sans-serif;
 }
-.hi
+
+/* Not required */
+/* .hi
 {
     height: 60px;
-}
-.logo
-{
+} */
+
+.logo {
     text-align: left;
     letter-spacing: 2px;
     color: rgb(53, 53, 53);
@@ -29,11 +30,12 @@ header
     font-size: 50px;
     font-family: 'Indie Flower', cursive;
 }
-.col{
+
+.col {
     padding-right: 8.333%
 }
-.he
-{
+
+.he {
     text-align: center;
     color: white;
     font-size: 20px;
@@ -43,7 +45,8 @@ header
     letter-spacing: 1px;
     font-family: 'PT Sans', sans-serif;
 }
-.he:hover{
+
+.he:hover {
 
     text-align: center;
     color: white;
@@ -54,8 +57,8 @@ header
     border-bottom: 3px solid #14CC60;
 
 }
-.but
-{
+
+.but {
     background-color: #F68D27;
     font-family: 'Roboto', sans-serif;
     text-align: end;
@@ -66,38 +69,40 @@ header
 .but:hover {
     background-color: rgb(170, 86, 2);
 }
-.qou
-{
+
+.qou {
     text-align: center;
     margin-top: 170px;
 }
-.qoum
-{
+
+.qoum {
     font-size: 60px;
     color: white;
     padding-top: 20vh;
 }
 
-.but1
-{
-    background-color:#F68D27;
+.but1 {
+    background-color: #F68D27;
     font-size: 20px;
     text-align: end;
     font-family: 'Roboto', sans-serif;
     margin-top: 30px;
     color: white;
 }
+
 .but1:hover {
     background-color: rgb(170, 86, 2);
 }
-h2{
+
+h2 {
     margin-top: 35px;
 }
-div{
+
+div {
     align-items: center;
 }
-.lklogo
-{
+
+.lklogo {
     text-align: center;
     letter-spacing: 2px;
     color: rgb(53, 53, 53);
@@ -105,6 +110,7 @@ div{
     font-size: 50px;
     font-family: 'Indie Flower', cursive;
 }
+
 .lk {
     margin-top: -50px;
     text-align: center;
@@ -115,36 +121,41 @@ div{
     width: 200px;
     height: 86px;
 }
-.lk-facebook
-{
-    color:#3B5998;
+
+.lk-facebook {
+    color: #3B5998;
 }
-.lk-instagram
-{
+
+.lk-instagram {
     color: #e1306c;
 }
-.lk-github
-{
+
+.lk-github {
     color: #6e5494;
 }
-.lk-twitter
-{
+
+.lk-twitter {
     color: #1da1f2;
 }
-.lk:hover{
+
+.lk:hover {
     background-color: #14CC60;
-	color: #b9f8d4;
+    color: #b9f8d4;
     text-decoration: none;
 }
 
 .placeholders {
     padding-bottom: 3rem;
 }
+
 .placeholder img {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
-.center-pills { display: inline-block; }
+
+.center-pills {
+    display: inline-block;
+}
 
 .contact-box {
     height: 300px;
@@ -159,19 +170,24 @@ div{
     margin-bottom: 40px;
     display: inline-block;
 }
+
 #nav {
     justify-content: center;
 }
-.navbar{
+
+.navbar {
     padding-top: 10px;
 }
-.nav-link{
+
+.nav-link {
     background-color: #8bf4b7;
     height: 101px;
 }
-.nav a{
+
+.nav a {
     padding: 10px 0px;
 }
-.nav li{
+
+.nav li {
     align-items: center;
 }
