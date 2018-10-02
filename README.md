@@ -9,8 +9,8 @@ Make sure you have [Node.js](http://nodejs.org/) and [MySQL](https://dev.mysql.c
 ```sh
 git clone https://github.com/treyhboy/Mint.git # or clone your own fork
 cd Mint
-npm install
-npm start
+cp .env.example .env
+docker-compose up -d
 ```
 
 Your app should now be running on [localhost:3100](http://localhost:3100/).

@@ -1,0 +1,22 @@
+version: '3'
+services:
+  app:
+    build: .
+    command: npm start
+    restart: always
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - mysql
+    ports:
+      - 3100:3100
+  mysql:
+    image: mysql:5.6
+    environment:
+        MYSQL_ROOT_PASSWORD: toor
+        MYSQL_DATABASE: testdb
+        MYSQL_USER: root
+        MYSQL_PASSWORD: toor
+    ports:
+        - 33061:3306
