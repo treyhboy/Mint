@@ -6,29 +6,29 @@ body {
 header {
     background-image: linear-gradient(rgba(164, 235, 185, 0.5), rgba(174, 244, 253, 0.5)), url("../img/bg.jpg");
     height: 100vh;
+    width: 100%;
     background-attachment: fixed;
-    background-position: top;
+    background-position: center;
     background-size: cover;
 }
 
-#head {
+.logo {
+
     color: rgb(53, 53, 53);
-    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
 }
 
-/* Not required */
-/* .hi
-{
-    height: 60px;
-} */
+@media only screen and (min-width:576px) {
+    .logo {
+        font-size: 35px;
+    }
+}
 
-.logo {
-    text-align: left;
-    letter-spacing: 2px;
-    color: rgb(53, 53, 53);
-    margin-top: 3px;
-    font-size: 50px;
-    font-family: 'Indie Flower', cursive;
+@media only screen and (min-width:768px) {
+    .logo {
+        font-size: 40px;
+    }
 }
 
 .col {
@@ -71,7 +71,7 @@ header {
     background-color: rgb(170, 86, 2);
 }
 
-.navbar-nav .nav-link.test {
+.navbar-nav .nav-link.login {
     display: inline-block;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -83,9 +83,22 @@ header {
 }
 
 .qoum {
-    font-size: 60px;
-    color: white;
+    color: rgb(53, 53, 53);
+    font-family: 'Raleway', sans-serif;
     padding-top: 20vh;
+    font-size: 40px;
+}
+
+@media only screen and (min-width:576px) {
+    .qoum {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .qoum {
+        font-size: 60px;
+    }
 }
 
 .but1 {
@@ -94,62 +107,34 @@ header {
     text-align: end;
     font-family: 'Roboto', sans-serif;
     margin-top: 30px;
+    transition: transform 0.2s linear, box-shadow 0.2s linear;
+}
+
+.but1 a {
     color: white;
 }
 
 .but1:hover {
-    background-color: rgb(170, 86, 2);
+    transform: scale(1.04);
+    box-shadow: 1px 2px 10px -2px rgba(0, 0, 0, 0.4);
+    /* background-color: rgb(170, 86, 2); */
 }
 
-h2 {
+/* h2 {
     margin-top: 35px;
-}
+} */
 
 div {
     align-items: center;
 }
 
-.lklogo {
-    text-align: center;
-    letter-spacing: 2px;
-    color: rgb(53, 53, 53);
-    margin-top: 3px;
-    font-size: 50px;
-    font-family: 'Indie Flower', cursive;
-}
 
 .lk {
-    margin-top: -50px;
-    text-align: center;
-    font-size: 60px;
-    text-decoration: none;
-    word-spacing: 2px;
-    letter-spacing: 0px;
-    width: 200px;
-    height: 86px;
+    color: white;
+    font-size: 20px;
+
 }
 
-.lk-facebook {
-    color: #3B5998;
-}
-
-.lk-instagram {
-    color: #e1306c;
-}
-
-.lk-github {
-    color: #6e5494;
-}
-
-.lk-twitter {
-    color: #1da1f2;
-}
-
-.lk:hover {
-    background-color: #14CC60;
-    color: #b9f8d4;
-    text-decoration: none;
-}
 
 .placeholders {
     padding-bottom: 3rem;
@@ -165,31 +150,22 @@ div {
 }
 
 .contact-box {
-    height: 300px;
-    text-align: center;
-    background-color: #b9f8d4;
+    /* height: 300px;
+        text-align: center; */
+    background-color: #0BC675;
 }
 
 #contact-head {
-    color: #14CC60;
+    color: white;
     font-family: 'Roboto', sans-serif;
-    padding-top: 40px;
-    margin-bottom: 40px;
-    display: inline-block;
+    font-size: 1rem;
 }
 
-#nav {
-    justify-content: center;
-}
 
 .navbar {
     padding-top: 10px;
 }
 
-/* .nav-link {
-    background-color: #8bf4b7;
-    height: 101px;
-} */
 
 .nav a {
     padding: 10px 0px;
