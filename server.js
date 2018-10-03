@@ -3,14 +3,20 @@ const app = express();
 const bp = require('body-parser');
 const user = require('./db').user;
 const Investment = require('./db').investment;
-const  spending = require('./db').spendings;
+const spending = require('./db').spendings;
 const reminder = require('./db').reminder;
-
+const passport = require('passport');
 
 app.use('/', express.static(__dirname + "/Public_static"))
-
 app.use(bp.urlencoded({extended: true}))
 app.use(bp.json())
+
+//Passport Authentication Implementation
+app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })); // session secret
+
+app.use(passport.initialize());
+
+app.use(passport.session()); // persistent login sessions
 
 app.post('/signup',(req,res) => {
     user.create({
