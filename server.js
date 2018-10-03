@@ -62,7 +62,7 @@ app.use(passport.session()); // persistent login sessions
 // });
 
 app.post('/login', passport.authenticate('local-signin', {
-        successRedirect: {console.log('login success')},
+        successRedirect: '/',
         failureRedirect: '/login',
         failureFlash: true
     }
