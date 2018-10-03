@@ -18,6 +18,7 @@
   "homepage": "https://github.com/treyhboy/Ftrack#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "dotenv": "^6.0.0",
     "express": "^4.16.2",
     "mysql": "^2.15.0",
     "mysql2": "^1.4.2",
