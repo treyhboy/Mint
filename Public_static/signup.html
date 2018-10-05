@@ -12,10 +12,23 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 	<link rel="stylesheet" href="css/signup.css" type="text/css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower|Source+Sans+Pro">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
 	<script type="text/javascript" src="superfish/superfish.js"></script>
     <script type="text/javascript" src="superfish/site.js"></script>
     <script type="text/javascript" src="js/signup.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#datepicker" ).datepicker({
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "1910:+nn",
+                defaultDate: null
+            });
+        });
+    </script>
 </head>
 <body>
 		<header>
@@ -53,7 +66,7 @@
 		<div>
             <div style="margin-top:-30px ">
                 <br>
-            <h>First Name</h>
+                <h>First Name</h>
 			<input type="text" name="first_name" value="" id="fname" \>
                 <h>Last Name</h>
         	<input type="text" name="last_name" value="" id="lname"\>
@@ -63,66 +76,9 @@
         	<input type="text" name="email" value="" id="em"\>
                 <h>Password</h>
         	<input type="password" name="password" value="" id="pass"\>
+                <h>Birthday</h>
+            <input type="text" id="datepicker"\>
 
-        	<p><span style="color: black">Birthday</span></p>
-        	<select>
-          	<option value="day">Day</option>
-          	<option value="1">1</option>
-          	<option value="2">2</option>
-          	<option value="3">3</option>
-          	<option value="4">4</option>
-          	<option value="5">6</option>
-          	<option value="5">7</option>
-          	<option value="5">8</option>
-          	<option value="5">9</option>
-          	<option value="5">10</option>
-          	<option value="5">11</option>
-          	<option value="5">12</option>
-          	<option value="5">13</option>
-          	<option value="5">14</option>
-          	<option value="5">15</option>
-          	<option value="5">16</option>
-          	<option value="5">17</option>
-          	<option value="5">18</option>
-          	<option value="5">19</option>
-          	<option value="5">20</option>
-          	<option value="5">21</option>
-          	<option value="5">22</option>
-          	<option value="5">23</option>
-          	<option value="5">24</option>
-          	<option value="5">25</option>
-          	<option value="5">26</option>
-          	<option value="5">27</option>
-          	<option value="5">28</option>
-          	<option value="5">29</option>
-          	<option value="5">30</option>
-          	<option value="5">31</option>
-          	</select>
-
-     		<select>
-          	<option value="month">Month</option>
-          	<option value="1">Jan</option>
-          	<option value="2">Feb</option>
-          	<option value="3">Mar</option>
-          	<option value="4">Apr</option>
-          	<option value="5">May</option>
-          	<option value="6">Jun</option>
-          	<option value="7">Jul</option>
-          	<option value="8">Aug</option>
-          	<option value="9">Sept</option>
-          	<option value="10">Oct</option>
-          	<option value="11">Nov</option>
-          	<option value="12">Dec</option>
-        	</select>
-
-        	<select>
-          	<option value="year">Year</option>
-          	<option value="1991">1991</option>
-          	<option value="1992">1992</option>
-          	<option value="1993">1993</option>
-          	<option value="1994">1994</option>
-          	<option value="1995">1995</option>
-        	</select>
         	 <br>
 
         	 <p><span style="color: white">Sex</span></p>

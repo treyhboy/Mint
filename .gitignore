@@ -6,3 +6,5 @@
 node_modules
 package-lock.json
 Public_static/mockup-of-main.html
+
+.env
