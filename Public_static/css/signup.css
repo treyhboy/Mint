@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
-body{
+body {
 	margin: 0;
 	padding: 0;
 	background-image: url(bg.jpg);
@@ -10,74 +10,65 @@ body{
 	font-family: sans-serif;
 }
 
-header{
+header {
 	background-image: none;
 	color: white;
 	padding: 8px 0px 6px 4px;
 	height: 60px;
-
 }
 
-header h1{
+header h1 {
 	display: inline;
 	font-family: 'Oswald', sans-serif;
-	font-size:45px;
-	float:left;
-	margin-top:0px;
+	font-size: 45px;
+	float: left;
+	margin-top: 0px;
 	margin-right:10px;
-
 }
 
 nav ul{
 	display: inline;
 	padding: 0px;
 	float: left;
-
 }
 
-nav ul li{
+nav ul li {
 	display: inline-block;
 	list-style-type: none;
 	color: white;
 	float: left;
 	margin-left: 12px;
-
-
 }
 
-nav ul li a{
+nav ul li a {
 	color: white;
 	text-decoration: none;
-
-
 }
 
-#nav{
+#nav {
 	font-family: "Montserrat";
-
-
 }
-.divider{
 
+.divider {
 	height: 7px;
 }
-.homered{
+
+.homered {
 	background-color:  #808080;
 	padding: 27px 10px 36px 10px;
 }
-.homeblack:hover{
+
+.homeblack:hover {
 	font-size:25px;
 	padding:  27px 10px 19px 10px;
-
 }
 
-.signupbox
-{
+.signupbox {
 	position: absolute;
-	top: 52%;
+	top: 65%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	padding: 80px 40px;
+	padding: 50px 40px;
 	width: 600px;
 	height: 700px;
 	box-sizing: border-box;
@@ -85,7 +76,7 @@ nav ul li a{
     border-radius: 30px;
 }
 
-.user{
+.user {
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
@@ -95,16 +86,14 @@ nav ul li a{
 	left: calc(50% - 90px);
 }
 
-h2{
+h2 {
 	margin-top: -40px;
 	padding: 0px 0px 20px;
 	color: black;
 	text-align: center;
 }
 
-
-
-.signupbox input{
+.signupbox input {
 	width: 100%;
 	margin-bottom: 20px;
 }
@@ -123,13 +112,11 @@ h2{
     margin-bottom: 20px;
 }
 
-::placeholder
-{
+::placeholder {
 	color: black;
 }
 
-.signupbox input[type="submit"]
-{
+.signupbox input[type="submit"] {
 	background-color: #14CC60;
 	color: black;
 	border:none;
@@ -148,26 +135,21 @@ h2{
     margin-top: -10px;
 }
 
-.signupbox input[type="submit"]
-{
+.signupbox input[type="submit"]{
 	background:#14CC60;
 	color:black;
-
 }
 
-.signupbox a{
+.signupbox a {
 	color:white;
 	font-size:14px;
 	font-weight: bold;
 	text-decoration: none;
-
 }
 
-h3{
-
+h3 {
 	height: 30px;
 	color: white;
 	font-family: "Oswald";
 	font-size: 20px;
-
 }
