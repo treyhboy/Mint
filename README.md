@@ -19,7 +19,6 @@ npm start
 
 You can also use Docker to run the app. This will remove the requirement of MySQL installed on your local machine and will run MySQL in a Docker container.
 ```sh
-cp .env.example .env
 docker-compose up -d
 ```
 
