@@ -1,4 +1,4 @@
-version: '3'
+version: '2.2'
 services:
   app:
     build: .
@@ -7,16 +7,33 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+    environment:
+      - DB_HOST=mysql
+      - DB_USERNAME=root
+      - DB_DATABASE=testdb
+      - DB_PASSWORD=toor
+      - PORT=3306
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
     ports:
       - 3100:3100
+    networks:
+      - mint
   mysql:
     image: mysql:5.6
+    healthcheck:
+      test: ["CMD", "mysql" ,"-h", "mysql", "-P", "3306", "-u", "root", "--password=toor", "-e", "SELECT 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 60
     environment:
         MYSQL_ROOT_PASSWORD: toor
         MYSQL_DATABASE: testdb
-        MYSQL_USER: root
-        MYSQL_PASSWORD: toor
-    ports:
-        - 33061:3306
+    expose:
+      - 3306
+    networks:
+      - mint
+
+networks:
+  mint:
