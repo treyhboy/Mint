@@ -2,6 +2,9 @@ const sequelize = require('sequelize');
 
 require('dotenv').config()
 
+/**
+ * @description database tables using sequelize
+ */
 const db = new sequelize ({
     host: process.env.DB_HOST,
     username: process.env.DB_USERNAME,
@@ -11,6 +14,9 @@ const db = new sequelize ({
     dialect:"mysql"
 });
 
+/**
+ * @description table name: credit , elements:mode, detail, amount
+ */
 const credit =  db.define('credit',{
     id:{
         type: sequelize.DataTypes.INTEGER,
@@ -22,6 +28,9 @@ const credit =  db.define('credit',{
     amount:sequelize.DataTypes.INTEGER,
 });
 
+/**
+ * @description table name: user , elements:username, email, pass, name, mob, budget
+ */
 const user =  db.define('user',{
     id:{
         type: sequelize.DataTypes.INTEGER,
@@ -36,6 +45,9 @@ const user =  db.define('user',{
     Budget:sequelize.DataTypes.INTEGER
 });
 
+/**
+ * @description table name: spendings , elements:user, detail, amount, Mode
+ */
 const spendings =  db.define('spendings',{
     id:{
         type: sequelize.DataTypes.INTEGER,
@@ -48,6 +60,9 @@ const spendings =  db.define('spendings',{
     Mode:sequelize.DataTypes.STRING
 });
 
+/**
+ * @description  table name: investment , elements:user, detail, amount, Mode
+ */
 const investment =  db.define('investment',{
     id:{
         type: sequelize.DataTypes.INTEGER,
@@ -60,6 +75,9 @@ const investment =  db.define('investment',{
     Mode:sequelize.DataTypes.STRING
 });
 
+/**
+ * @description  table name: reminder , elements:user, detail, amount, date
+ */
 const reminder =  db.define('reminders',{
     id:{
         type: sequelize.DataTypes.INTEGER,
@@ -71,6 +89,10 @@ const reminder =  db.define('reminders',{
     amount:sequelize.DataTypes.INTEGER,
     date:sequelize.DataTypes.STRING
 });
+
+/**
+ * @description  table name: transaction , elements:user, detail, amount, date, type
+ */
 const transaction = db.define('transaction',{
     id:{
         type: sequelize.DataTypes.INTEGER,

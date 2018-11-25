@@ -1,3 +1,6 @@
+/**
+ * @summary server use passport express mysql sequelize socket.io
+ */
 const express = require('express');
 const app = express();
 const bp = require('body-parser');
