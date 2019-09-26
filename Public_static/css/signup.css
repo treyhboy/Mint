@@ -63,6 +63,11 @@ nav ul li a {
     padding: 27px 10px 19px 10px;
 }
 
+header.formcontainer {
+    position: relative;
+    min-height: 900px;
+}
+
 .signupbox {
     position: absolute;
     left: 50%;
