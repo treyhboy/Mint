@@ -16,3 +16,30 @@ header{
 	margin:0px;
 	padding:0px;
 }
+
+.he{
+    
+    color: black ! important;
+    border: 2px solid white;
+    margin: 5px !important;
+    
+    
+    
+    
+}
+.qoum{
+   font-size: 50px;
+    color: black;
+}
+.description{
+    width: 80%;
+    margin: auto;
+}
+
+#contact-head{
+    color: black;
+}
+.lk{
+    color: black;
+}
+
