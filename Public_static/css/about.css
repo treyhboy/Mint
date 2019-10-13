@@ -16,3 +16,26 @@ header{
 	margin:0px;
 	padding:0px;
 }
+#contact-head{
+    font-size: 17px;
+    font-weight: 600;
+    padding: 20px;
+    color: black
+}
+.row i{
+    font-size: 30px;
+    color: black;
+}
+.content{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-size: 20px;
+}
+.he{
+    color: black !important;
+    font-size: 20px !important;
+    border: 2px solid #000;
+    border-radius: 55px;
+    margin-left: 5px !important;
+    
+}
