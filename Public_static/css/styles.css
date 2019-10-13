@@ -158,7 +158,9 @@ div {
 #contact-head {
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    font-size:20px;
+    font-weight:bolder;
+    margin:20px 20px 40px 20px;
 }
 
 

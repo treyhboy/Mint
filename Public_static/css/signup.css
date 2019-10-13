@@ -17,7 +17,6 @@ body {
 	height: 60px;
 
 }*/
-
 header h1 {
   display: inline;
   font-family: "Oswald", sans-serif;
@@ -64,11 +63,15 @@ nav ul li a {
   padding: 27px 10px 19px 10px;
 }
 
+header.formcontainer {
+  position: relative;
+  min-height: 900px;
+}
+
 .signupbox {
   position: absolute;
-  top: 65%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
   padding: 80px 40px;
   margin-top: 150px;
   width: 600px;
@@ -95,7 +98,7 @@ h2 {
   text-align: center;
 }
 
-.signupbox input:not(.radio-button) {
+.signupbox input {
   width: 100%;
   margin-bottom: 20px;
 }
