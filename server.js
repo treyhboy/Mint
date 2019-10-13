@@ -9,12 +9,12 @@ const Investment = require('./db').investment;
 const spending = require('./db').spendings;
 const reminder = require('./db').reminder;
 const passport = require('passport');
-const  session = require('express-session')
+const session = require('express-session')
 
 require('./Public_static/js/passport.js')(passport, user);
 
 app.use('/', express.static(__dirname + "/Public_static"))
-app.use(bp.urlencoded({extended: true}))
+app.use(bp.urlencoded({ extended: true }))
 app.use(bp.json())
 
 //Passport Authentication Implementation
@@ -38,13 +38,13 @@ app.use(passport.session()); // persistent login sessions
 //         });
 // });
 
- app.post('/signup', passport.authenticate('local-signup', {
-            successRedirect: '/',
-            failureRedirect: '/signup',
-            failureFlash: true
-        }
- 
-    ));
+app.post('/signup', passport.authenticate('local-signup', {
+    successRedirect: '/',
+    failureRedirect: '/signup',
+    failureFlash: true
+}
+
+));
 
 
 // app.post('/login',(req,res)=> {
@@ -65,128 +65,14 @@ app.use(passport.session()); // persistent login sessions
 // });
 
 app.post('/login', passport.authenticate('local-signin', {
-        successRedirect: '/',
-        failureRedirect: '/login',
-        failureFlash: true
-    }
- 
+    successRedirect: '/',
+    failureRedirect: '/login',
+    failureFlash: true
+}
+
 ));
 
-app.post('/spen',(req,res)=> {
-    spending.findAll({where: {user: req.body.user}}).then(
-        function (db) {
-            if(db[0]) {
-                res.send({status: 'found',data:db})
-            }else {
-                res.send({status: 'not found'})
-
-            }
-        }).catch(function (err) {
-        console.log('err');
-        res.send(err)
-    })
-});
-
-app.post('/down',(req,res)=> {
-    reminder.findAll({where: {user: req.body.user}}).then(
-        function (db) {
-            if(db[0]) {
-                res.send({status: 'found',data:db})
-            }else {
-                res.send({status: 'not found'})
-
-            }
-        }).catch(function (err) {
-        console.log('err');
-        res.send(err)
-    })
-});
-
-
-app.post('/invest',(req,res)=> {
-    Investment.findAll({where: {user: req.body.user}}).then(
-        function (db) {
-            if(db[0]) {
-                res.send({status: 'found',data:db})
-            }else {
-                res.send({status: 'not found'})
-
-            }
-        }).catch(function (err) {
-        console.log('err');
-        res.send(err)
-    })
-});
-app.post('/tran',(req,res)=> {
-    console.log(req.body.type);
-    if(req.body.type == "Spending") {
-        spending.create({
-            user:req.body.user,
-            detail: req.body.det,
-            amount: req.body.amt,
-            Mode: req.body.mode
-        }).then(
-            function () {
-                console.log('spending');
-                res.send({status:true})
-            }).catch(function (err) {
-                console.log('err');
-                 res.send(err);
-        })
-    }
-    else
-    {
-        Investment.create({
-            user:req.body.user,
-            detail: req.body.det,
-            amount: req.body.amt,
-            Mode: req.body.mode
-        }).then(
-            function () {
-                console.log('investment');
-                res.send({status:true})
-            }).catch(function (err) {
-            console.log('err');
-            res.send(err);
-        })
-
-    }
-});
-app.post('/rem',(req,res)=> {
-    reminder.create({
-            user:req.body.user,
-            detail: req.body.det,
-            amount: req.body.amt,
-            date: req.body.dat
-            }).then(
-            function () {
-                res.send({status:true})
-            }).catch(function (err) {
-            console.log('err');
-            res.send(err);
-        })
-});
-app.post('/overview1',(req,res)=> {
-    spending.findAll({
-        where: {
-                user:req.body.user
-        }
-    }).then(result => {
-            res.send(result);
-        });
-});
-
-app.post('/overview2',(req,res)=> {
-    Investment.findAll({
-        where: {
-            user:req.body.user
-        }
-    }).then(result => {
-        res.send(result);
-    });
-});
-
-
+app.use('/', require('./routes/index'));
 
 app.listen(3100, function () {
     console.log("Server started on http://localhost:3100");
