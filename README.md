@@ -24,6 +24,9 @@ docker-compose up -d
 
 Your app should now be running on [localhost:3100](http://localhost:3100/).
 
+## screenshots from the app
+![about](Screenshots/about.png)
+
 ## Contribution
 
 Some UI changes to the app would be great for going and some feature enhances.
