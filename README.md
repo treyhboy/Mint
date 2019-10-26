@@ -31,8 +31,8 @@ Your app should now be running on [localhost:3100](http://localhost:3100/).
 ### Login Page
 ![login](Screenshots/login.png)
 
-### About Page
-![about](Screenshots/about.png)
+### Main Page
+![main](Screenshots/main.png)
 
 ### Working Page
 ![working page](Screenshots/working%20page.png)
