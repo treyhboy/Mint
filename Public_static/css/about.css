@@ -37,5 +37,11 @@ header{
     border: 2px solid #000;
     border-radius: 55px;
     margin-left: 5px !important;
-    
+
+}
+
+@media only screen and (max-device-width: 1366px) {
+	.qou {
+		margin-top: 9px;
+	}
 }
