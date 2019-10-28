@@ -1,3 +1,4 @@
+// looks good so far so good
 const reminder = require('../../db').reminder;
 
 const insertReminder = async (req, res) => {
