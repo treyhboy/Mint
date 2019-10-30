@@ -36,6 +36,13 @@ header{
     color: rgba(0,0,0,.5);
     font-weight: normal;
 }
+
+@media only screen and (max-device-width: 1366px) {
+	.qou {
+		margin-top: 9px;
+	}
+  
+}
 .nav a:hover{
     color: rgba(0,0,0,.7);
     background: transparent;

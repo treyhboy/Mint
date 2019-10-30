@@ -2,7 +2,7 @@ const Investment = require('../../db').investment;
 
 const getOverview = async (req, res) => {
     try {
-        await Investment.findAll({
+        const result = await Investment.findAll({
             where: {
                 user: req.body.user
             }
