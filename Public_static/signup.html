@@ -20,7 +20,6 @@
       href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
     />
     <link rel="stylesheet" href="superfish/horz_menu.css" type="text/css" />
-    <link rel="stylesheet" href="css/main1.css" type="text/css" />
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
     <link rel="stylesheet" href="css/signup.css" type="text/css" />
     <link
@@ -55,42 +54,40 @@
     </script>
   </head>
   <body>
-    <header>
-      <div class="container-fluid hi">
-        <div class="row">
-          <div class="col-2">
-            <h1 class="logo">
-              <i class="ion-paper-airplane" style="color: #14CC60"></i>Mint
-            </h1>
-          </div>
-          <div class="col">
-            <ul class="nav nav justify-content-center superfish" id="nav">
-              <li class="nav-item">
-                <a class="nav-link he" href="./index.html">Main</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link he" href="./about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link he" href="./index.html#how_it_works"
-                  >How it Works</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link he" href="./index.html#con">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-1" id="face">
-            <button type="button" class="btn but">
-              <a href="login.html" style="text-decoration: none;color: white">
-                <i class="fas fa-key"></i>
-                &nbsp;Login
-              </a>
-            </button>
-          </div>
+
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand logo" href="./index.html"><i class="ion-paper-airplane" style="color: #14CC60"></i>Mint</a>
+
+            
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#how_it_works">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./signup.html">Get Started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#con">Contact</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav d-none d-sm-block">
+                    <li class="nav-item">
+                        <a class="nav-link but login" href="./login.html"><i class="fas fa-key"></i>
+                            &nbsp;Login</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </nav>
+    <header>
+
     </header>
     <div class="divider"></div>
 
