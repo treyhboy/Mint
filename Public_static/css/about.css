@@ -20,28 +20,57 @@ header{
     font-size: 17px;
     font-weight: 600;
     padding: 20px;
-    color: black
 }
 .row i{
-    font-size: 30px;
-    color: black;
+    color: #ffffff;
+    font-size: 18px;
 }
 .content{
     margin-top: 2vh;
     margin-bottom: 2vh;
     font-size: 20px;
 }
-.he{
-    color: black !important;
-    font-size: 20px !important;
-    border: 2px solid #000;
-    border-radius: 55px;
-    margin-left: 5px !important;
 
+.nav a{
+    background-color: transparent;
+    color: rgba(0,0,0,.5);
+    font-weight: normal;
 }
 
 @media only screen and (max-device-width: 1366px) {
 	.qou {
 		margin-top: 9px;
 	}
+  
 }
+.nav a:hover{
+    color: rgba(0,0,0,.7);
+    background: transparent;
+}
+
+.he:hover{
+    color: rgba(0,0,0,.7);
+    border-bottom: transparent;
+}
+
+.he:after{
+    padding: 3px;
+    display:block;
+    content: '';
+    border-bottom: solid 3px #14CC60;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+.he:hover:after { transform: scaleX(1); }
+
+.hi{
+    background-color: #ffffff;
+}
+
+.btn a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff !important;
+}
+
