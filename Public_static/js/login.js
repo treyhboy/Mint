@@ -4,7 +4,7 @@ $( function () {
     let submit = $('#submit');
     submit.click(function (event) {
         event.preventDefault();
-        $.post('/login', {user:user.val(),pass:pass.val() }, function (data) {
+        $.post('/login', {email:user.val(),password:pass.val() }, function (data) {
             console.log('submit');
             if (data.status==='found') {
                 console.log('success');

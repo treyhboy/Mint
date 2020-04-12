@@ -1,6 +1,6 @@
 const sequelize = require('sequelize');
 
-require('dotenv').config()
+require('dotenv').config({path: process.cwd() + '/.env.example'});
 
 /**
  * @description database tables using sequelize
@@ -39,9 +39,9 @@ const user =  db.define('user',{
     },
     username:sequelize.DataTypes.STRING,
     email:sequelize.DataTypes.STRING,
-    pass:sequelize.DataTypes.STRING,
+    password:sequelize.DataTypes.STRING,
     name:sequelize.DataTypes.STRING,
-    mob:sequelize.DataTypes.STRING,
+    mobile:sequelize.DataTypes.STRING,
     Budget:sequelize.DataTypes.INTEGER
 });
 
