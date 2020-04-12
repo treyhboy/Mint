@@ -9,68 +9,79 @@ const Investment = require('./db').investment;
 const spending = require('./db').spendings;
 const reminder = require('./db').reminder;
 const passport = require('passport');
-const session = require('express-session')
+const session = require('express-session');
+const response = require('./utils-module/response');
 
-require('./Public_static/js/passport.js')(passport, user);
+//To locate the config folder by default it searches for .env here it is .env.example
 
-app.use('/', express.static(__dirname + "/Public_static"))
-app.use(bp.urlencoded({ extended: true }))
-app.use(bp.json())
+//Sample ENV properties are loaded here in reallife scenario this would be populated by the environment property of machine running the app server
+
+require('dotenv').config({path: process.cwd() + '/.env.example'});
+
+
+app.use('/', express.static(__dirname + "/Public_static"));
+app.use(bp.urlencoded({ extended: true }));
+app.use(bp.json());
+
+
+app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })); // session secret
 
 //Passport Authentication Implementation
-app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })); // session secret
+
+require('./config/passport.js');
 
 app.use(passport.initialize());
 
 app.use(passport.session()); // persistent login sessions
 
-// app.post('/signup',(req,res) => {
-//     user.create({
-//         name:req.body.fname+req.body.lname,
-//         mob:req.body.mob,
-//         username:req.body.em,
-//         pass:req.body.pass
-//         }).then(function () {
-//             res.send({success:true})
-//         }).catch(function(err)
-//         {
-//             throw err;
-//         });
-// });
-
-app.post('/signup', passport.authenticate('local-signup', {
-    successRedirect: '/',
-    failureRedirect: '/signup',
-    failureFlash: true
-}
-
-));
 
 
-// app.post('/login',(req,res)=> {
-//     user.findAll({where: {username: req.body.user, pass: req.body.pass}}).then(
-//         function (db) {
-//             if(db[0]) {
-//                 console.log('found')
-//                 res.send({status: 'found',name:db[0].name})
-//             }else {
-//                 console.log('not');
-//                 res.send({status: 'not found'})
+//Sign up Implementation
 
-//             }
-//         }).catch(function (err) {
-//         console.log('err');
-//             res.send(err)
-//     })
-// });
 
-app.post('/login', passport.authenticate('local-signin', {
-    successRedirect: '/',
-    failureRedirect: '/login',
-    failureFlash: true
-}
 
-));
+app.post('/signup',(req,res,next) => {
+    passport.authenticate('local-signup', function (err,user,info) {
+
+        if(err)
+        {
+            return response.responseWriter(res,500,info);
+        }
+        else if(!user)
+        {
+            return response.responseWriter(res,400,info);
+        }
+       else
+       {
+            return response.responseWriter(res, 200, user);
+       }
+        
+    })(req,res,next);
+});
+
+
+
+
+//Login value is sent to 
+
+app.post('/login',(req,res,next) => {
+    passport.authenticate('local-signin', function (err,user,info) {
+
+        if(err)
+        {
+            return response.responseWriter(res,500,info);
+        }
+        else if(!user)
+        {
+            return response.responseWriter(res,400,info);
+        }
+       else
+       {
+            return response.responseWriter(res, 200, user);
+       }
+        
+    })(req,res,next);
+});
 
 app.use('/', require('./routes/index'));
 

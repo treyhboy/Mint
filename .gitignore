@@ -6,4 +6,6 @@
 node_modules
 Public_static/mockup-of-main.html
 
+.vscode
+
 .env
