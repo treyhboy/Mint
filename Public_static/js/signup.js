@@ -9,11 +9,11 @@ $(function() {
     $.post(
       "/signup",
       {
-        fname: fname.val(),
-        lname: lname.val(),
-        mob: mob.val(),
-        em: em.val(),
-        pass: pass.val()
+        firstname: fname.val(),
+        lastname: lname.val(),
+        mobile: mob.val(),
+        email: em.val(),
+        password: pass.val()
       },
       function(data) {
         if (data.success) {
