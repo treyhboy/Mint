@@ -1,72 +1,79 @@
-let ret = "";
-$( function () {
-    let spen = $('#spend');
-    let tran  = $('#trans');
-    let box  = $('#box');
-    let invest = $('#invest');
-    let over = $('#overview');
-    let rem = $('#rem');
+let ret = '';
+$(function () {
+    const spen = $('#spend');
+    const tran = $('#trans');
+    const box = $('#box');
+    const invest = $('#invest');
+    const over = $('#overview');
+    const rem = $('#rem');
     x();
     overv();
-    rem.click(setrem)
+    rem.click(setrem);
     over.click(overv);
     spen.click(function () {
         console.log('in fun');
-        $.post('/spen', {user:ret}, function (data) {
-            if (data.status==='found') {
+        $.post('/spen', {user: ret}, function (data) {
+            if (data.status === 'found') {
                 box.empty();
                 box.append(`<div class="col" style="margin-top: 30px" id="nb">
                 </div>`);
                 console.log('submit');
-                for(i in data.data) {
+                for (i in data.data) {
                     console.log(box);
                     $('#nb').append(`<div class="card" style="margin-top: 20px">
                 <div class="card-body">
-                Spent on ${data.data[i].detail} <br><br><strong style="margin-left: 50px">Amount:</strong>&nbsp;${data.data[i].amount} <strong style="margin-left: 600px">Mode:</strong>&nbsp;${data.data[i].Mode} 
+                Spent on ${
+                        data.data[i].detail
+                    } <br><br><strong style="margin-left: 50px">Amount:</strong>&nbsp;${
+                        data.data[i].amount
+                    } <strong style="margin-left: 600px">Mode:</strong>&nbsp;${
+                        data.data[i].Mode
+                    }
                 </div>
                 </div>
                     `);
                 }
-                }
-            else {
+            } else {
                 console.log('no success');
             }
-        })
-
+        });
     });
     invest.click(function () {
         console.log('in fun');
-        $.post('/invest', {user:ret}, function (data) {
-            if (data.status==='found') {
+        $.post('/invest', {user: ret}, function (data) {
+            if (data.status === 'found') {
                 box.empty();
                 box.append(`<div class="col" style="margin-top: 30px" id="nb">
                 </div>`);
                 console.log('submit');
-                for(i in data.data) {
+                for (i in data.data) {
                     console.log(box);
                     $('#nb').append(`<div class="card" style="margin-top: 20px">
                 <div class="card-body">
-                Invested on ${data.data[i].detail} <br><br><strong style="margin-left: 50px">Amount:</strong>&nbsp;${data.data[i].amount} <strong style="margin-left: 600px">Mode:</strong>&nbsp;${data.data[i].Mode} 
+                Invested on ${
+                        data.data[i].detail
+                    } <br><br><strong style="margin-left: 50px">Amount:</strong>&nbsp;${
+                        data.data[i].amount
+                    } <strong style="margin-left: 600px">Mode:</strong>&nbsp;${
+                        data.data[i].Mode
+                    }
                 </div>
                 </div>
                     `);
                 }
-            }
-            else {
+            } else {
                 console.log('no success');
             }
-        })
-
+        });
     });
     tran.click(crtran);
-
-})
+});
 const x = function () {
-    ret= sessionStorage.getItem('name');
+    ret = sessionStorage.getItem('name');
 };
 const setrem = function () {
     console.log('in fun');
-    let box  = $('#box');
+    const box = $('#box');
     box.empty();
     box.append(`
         <div class="card justify-content-center" style="margin-top: 20px;">
@@ -157,28 +164,29 @@ const setrem = function () {
                 </div>
             </div>
         </div>
-`)
-    let submit = $('#submit');
+`);
+    const submit = $('#submit');
     submit.click(function () {
-        let amt = $('#amt');
-        let det = $('input[name="cb"]:checked');
-        let dat = $('#dat');
-        $.post('/rem', {amt:amt.val(),det:det.val(),user:ret,dat:dat.val()}, function (data) {
-            window.location.href = "main.html";
-            if (data.status==='found') {
-                console.log('success');
-
+        const amt = $('#amt');
+        const det = $('input[name="cb"]:checked');
+        const dat = $('#dat');
+        $.post(
+            '/rem',
+            {amt: amt.val(), det: det.val(), user: ret, dat: dat.val()},
+            function (data) {
+                window.location.href = 'main.html';
+                if (data.status === 'found') {
+                    console.log('success');
+                } else {
+                    console.log('no success');
+                }
             }
-            else {
-                console.log('no success');
-            }
-        })
-    })
-
-}
-const crtran =  function () {
+        );
+    });
+};
+const crtran = function () {
     console.log('in fun');
-    let box  = $('#box');
+    const box = $('#box');
     box.empty();
     box.append(`
         <div class="card justify-content-center" style="margin-top: 20px;">
@@ -279,29 +287,37 @@ const crtran =  function () {
                 </div>
             </div>
         </div>
-`)
-    let submit = $('#submit');
-    let inv = $('#inv');
-    let spen = $('#spen');
+`);
+    const submit = $('#submit');
+    const inv = $('#inv');
+    const spen = $('#spen');
     submit.click(function () {
-        let type = $('input[name="cp"]:checked');
-        let amt = $('#amt');
-        let mode = $('input[name="cd"]:checked');
-        let det = $('input[name="cb"]:checked');
-        console.log(type.val())
-        $.post('/tran', {type:type.val(),amt:amt.val(),mode:mode.val() ,det:det.val(),user:ret}, function (data) {
-            console.log('submit');
-            window.location.href = "main.html";
-            if (data.status==='found') {
-                console.log('success');
-
+        const type = $('input[name="cp"]:checked');
+        const amt = $('#amt');
+        const mode = $('input[name="cd"]:checked');
+        const det = $('input[name="cb"]:checked');
+        console.log(type.val());
+        $.post(
+            '/tran',
+            {
+                type: type.val(),
+                amt: amt.val(),
+                mode: mode.val(),
+                det: det.val(),
+                user: ret,
+            },
+            function (data) {
+                console.log('submit');
+                window.location.href = 'main.html';
+                if (data.status === 'found') {
+                    console.log('success');
+                } else {
+                    console.log('no success');
+                }
             }
-            else {
-                console.log('no success');
-            }
-        })
-    })
-    let desc = $('#desc');
+        );
+    });
+    const desc = $('#desc');
     inv.click(function () {
         desc.empty();
         desc.append(`<div class="form-check" style="margin-top: 20px">
@@ -324,8 +340,8 @@ const crtran =  function () {
                         <input type="radio" value="Policies" name="cb" style="margin-left: 25px" class="f3">
                         &nbsp;Policies
                     </label>
-                </div>`)
-    })
+                </div>`);
+    });
     spen.click(function () {
         desc.empty();
         desc.append(`<div class="form-check" style="margin-top: 20px">
@@ -367,19 +383,24 @@ const crtran =  function () {
                         &nbsp;&nbsp;Misc
                     </label>
                 </div>
-            `)
-    })
+            `);
+    });
     console.log(submit);
-}
+};
 const overv = function () {
-
-    let box  = $('#box');
+    const box = $('#box');
     box.empty();
-    box.append(`<div class="col" id="tab" style="width: 100%;margin-top: 20px"></div>`);
-    let tab = $('#tab');
-    tab.append(`<div id="chartContainer" style="height: 300px; width: 50%; margin-left: -10px ;display: inline-table"></div>`);
-    tab.append(`<div id="chartContainer2" style="height: 300px; width: 50%; margin-left: -10px ;display: inline-table"></div>`);
-    $.post('/overview1',{user:ret},function (data) {
+    box.append(
+        `<div class="col" id="tab" style="width: 100%;margin-top: 20px"></div>`
+    );
+    const tab = $('#tab');
+    tab.append(
+        `<div id="chartContainer" style="height: 300px; width: 50%; margin-left: -10px ;display: inline-table"></div>`
+    );
+    tab.append(
+        `<div id="chartContainer2" style="height: 300px; width: 50%; margin-left: -10px ;display: inline-table"></div>`
+    );
+    $.post('/overview1', {user: ret}, function (data) {
         let fam = 0;
         let sham = 0;
         let fuam = 0;
@@ -387,148 +408,141 @@ const overv = function () {
         let Gam = 0;
         let Iam = 0;
         let Mam = 0;
-        for (i in data)
-        {
-            if(data[i].detail == 'Food')
-                fam += data[i].amount
-            if(data[i].detail == 'Shopping')
-                sham += data[i].amount
-            if(data[i].detail == 'Misc')
-                Mam += data[i].amount
-            if(data[i].detail == 'Fuel')
-                fuam += data[i].amount
-            if(data[i].detail == 'Bills')
-                Bam += data[i].amount
-            if(data[i].detail == 'Grocery')
-                Gam += data[i].amount
-            if(data[i].detail == 'Interest')
-                Iam += data[i].amount
+        for (i in data) {
+            if (data[i].detail == 'Food') fam += data[i].amount;
+            if (data[i].detail == 'Shopping') sham += data[i].amount;
+            if (data[i].detail == 'Misc') Mam += data[i].amount;
+            if (data[i].detail == 'Fuel') fuam += data[i].amount;
+            if (data[i].detail == 'Bills') Bam += data[i].amount;
+            if (data[i].detail == 'Grocery') Gam += data[i].amount;
+            if (data[i].detail == 'Interest') Iam += data[i].amount;
         }
-        let t = sham + fam + fuam +Bam + Gam +Iam +Mam;
-        let shp = (sham/t)*100;
-        let fp = (fam/t)*100;
-        let mp = (Mam/t)*100;
-        let fup = (fuam/t)*100;
-        let bp = (Bam/t)*100;
-        let gp = (Gam/t)*100;
-        let ip = (Iam/t)*100;
+        const t = sham + fam + fuam + Bam + Gam + Iam + Mam;
+        const shp = (sham / t) * 100;
+        const fp = (fam / t) * 100;
+        const mp = (Mam / t) * 100;
+        const fup = (fuam / t) * 100;
+        const bp = (Bam / t) * 100;
+        const gp = (Gam / t) * 100;
+        const ip = (Iam / t) * 100;
 
-        var chart = new CanvasJS.Chart("chartContainer", {
+        const chart = new CanvasJS.Chart('chartContainer', {
             animationEnabled: true,
-            title:{
-                text: "Spendings",
-                fontWeight: "Bold",
-                fontColor: "#14CC60",
-                fontFamily: "tahoma",
+            title: {
+                text: 'Spendings',
+                fontWeight: 'Bold',
+                fontColor: '#14CC60',
+                fontFamily: 'tahoma',
 
-                horizontalAlign: "center"
+                horizontalAlign: 'center',
             },
-            data: [{
-                type: "doughnut",
-                startAngle: 60,
-                //innerRadius: 60,
-                indexLabelFontSize: 15,
-                indexLabel: "{label} - #percent%",
-                toolTipContent: "<b>{label}:</b> {y} (#percent%)",
-                dataPoints: [
-                    { y: fp, label: "Food & Drinks", },
-                    { y: shp, label: "Shopping" },
-                    { y: fup, label: "Fuel" },
-                    { y: bp, label: "Bills"},
-                    { y: gp, label: "Grocery"},
-                    { y: ip, label: "Interest"},
-                    { y: mp, label: "Misc"}
-                ]
-            }]
+            data: [
+                {
+                    type: 'doughnut',
+                    startAngle: 60,
+                    // innerRadius: 60,
+                    indexLabelFontSize: 15,
+                    indexLabel: '{label} - #percent%',
+                    toolTipContent: '<b>{label}:</b> {y} (#percent%)',
+                    dataPoints: [
+                        {y: fp, label: 'Food & Drinks'},
+                        {y: shp, label: 'Shopping'},
+                        {y: fup, label: 'Fuel'},
+                        {y: bp, label: 'Bills'},
+                        {y: gp, label: 'Grocery'},
+                        {y: ip, label: 'Interest'},
+                        {y: mp, label: 'Misc'},
+                    ],
+                },
+            ],
         });
         chart.render();
     });
-    $.post('/overview2',{user:ret},function (data) {
+    $.post('/overview2', {user: ret}, function (data) {
         let sham = 0;
         let ram = 0;
         let pam = 0;
         let fam = 0;
-        for (i in data)
-        {
-            if(data[i].detail == 'Shares')
-                sham += data[i].amount
-            if(data[i].detail == 'Policies')
-                pam += data[i].amount
-            if(data[i].detail == 'FDs')
-                fam += data[i].amount
-            if(data[i].detail == 'Real Estate')
-                ram += data[i].amount
+        for (i in data) {
+            if (data[i].detail == 'Shares') sham += data[i].amount;
+            if (data[i].detail == 'Policies') pam += data[i].amount;
+            if (data[i].detail == 'FDs') fam += data[i].amount;
+            if (data[i].detail == 'Real Estate') ram += data[i].amount;
         }
-        let t = sham + ram + pam +fam;
-        let sp = (sham/t)*100;
-        let rp = (ram/t)*100;
-        let pp = (pam/t)*100;
-        let fp = (fam/t)*100;
-        var chart = new CanvasJS.Chart("chartContainer2", {
+        const t = sham + ram + pam + fam;
+        const sp = (sham / t) * 100;
+        const rp = (ram / t) * 100;
+        const pp = (pam / t) * 100;
+        const fp = (fam / t) * 100;
+        const chart = new CanvasJS.Chart('chartContainer2', {
             animationEnabled: true,
-            title:{
-                text: "Investments",
-                fontWeight: "Bold",
-                fontColor: "#14CC60",
-                fontFamily: "tahoma",
+            title: {
+                text: 'Investments',
+                fontWeight: 'Bold',
+                fontColor: '#14CC60',
+                fontFamily: 'tahoma',
 
-                horizontalAlign: "center"
+                horizontalAlign: 'center',
             },
-            data: [{
-                type: "doughnut",
-                startAngle: 60,
-                //innerRadius: 60,
-                indexLabelFontSize: 15,
-                indexLabel: "{label} - #percent%",
-                toolTipContent: "<b>{label}:</b> {y} (#percent%)",
-                dataPoints: [
-                    { y: fp, label: "FDs", },
-                    { y: sp, label: "Shares" },
-                    { y: rp, label: "Real Estate" },
-                    { y: pp, label: "Policies"},
-                ]
-            }]
+            data: [
+                {
+                    type: 'doughnut',
+                    startAngle: 60,
+                    // innerRadius: 60,
+                    indexLabelFontSize: 15,
+                    indexLabel: '{label} - #percent%',
+                    toolTipContent: '<b>{label}:</b> {y} (#percent%)',
+                    dataPoints: [
+                        {y: fp, label: 'FDs'},
+                        {y: sp, label: 'Shares'},
+                        {y: rp, label: 'Real Estate'},
+                        {y: pp, label: 'Policies'},
+                    ],
+                },
+            ],
         });
         chart.render();
-
     });
 
-    $.post('/down', {user:ret}, function (data) {
-        if (data.status==='found') {
+    $.post('/down', {user: ret}, function (data) {
+        if (data.status === 'found') {
             tab.append(`<div class="col" style="margin-top: 60px" id="npl">
                 </div>`);
-            for(i in data.data) {
+            for (i in data.data) {
                 console.log(box);
                 $('#npl').append(`<div class="card" style="margin-top: 20px">
                 <div class="card-body">
-                ${data.data[i].detail} is Due <br><br><strong style="margin-left: 50px">Last Date:</strong>&nbsp;${data.data[i].date} <strong style="margin-left: 480px">Amount:</strong>&nbsp;${data.data[i].amount} 
+                ${
+                    data.data[i].detail
+                } is Due <br><br><strong style="margin-left: 50px">Last Date:</strong>&nbsp;${
+                    data.data[i].date
+                } <strong style="margin-left: 480px">Amount:</strong>&nbsp;${
+                    data.data[i].amount
+                }
                 </div>
                 </div>
                     `);
             }
-        }
-        else {
+        } else {
             console.log('no success');
         }
-    })
+    });
+};
 
-
-
-}
-
-
-    $(".nav-link").on('click', function(event) {
-  
-      if (this.hash !== "") {
+$('.nav-link').on('click', function (event) {
+    if (this.hash !== '') {
         event.preventDefault();
 
-        var hash = this.hash;
+        const {hash} = this;
 
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 800, function(){
-     
-          window.location.hash = hash;
-        });
-      } 
-    });
+        $('html, body').animate(
+            {
+                scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+                window.location.hash = hash;
+            }
+        );
+    }
+});

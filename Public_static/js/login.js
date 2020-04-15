@@ -1,20 +1,20 @@
-$( function () {
-    let user = $('#user');
-    let pass = $('#pass');
-    let submit = $('#submit');
+$(function () {
+    const user = $('#user');
+    const pass = $('#pass');
+    const submit = $('#submit');
     submit.click(function (event) {
         event.preventDefault();
-        $.post('/login', {email:user.val(),password:pass.val() }, function (data) {
+        $.post('/login', {email: user.val(), password: pass.val()}, function (
+            data
+        ) {
             console.log('submit');
-            if (data.status==='found') {
+            if (data.status === 'found') {
                 console.log('success');
-                window.location.href = "http://localhost:3100/"
-                sessionStorage.setItem('name',data.name);
-
-            }
-            else {
+                window.location.href = 'http://localhost:3100/';
+                sessionStorage.setItem('name', data.name);
+            } else {
                 console.log('no success');
             }
-        })
-    })
-})
+        });
+    });
+});
