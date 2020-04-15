@@ -46,7 +46,7 @@ header
 .hee:hover{
 
     text-align: center;
-    color: blck;
+    color: black;
     margin-top: 4px;
     text-decoration: none;
     word-spacing: 2px;
@@ -87,7 +87,7 @@ header
     background-color: #14CC60;
     font-size: 20px;
     text-align: end;
-    font-family: Arial;
+    font-family: Arial, serif;
     margin-top: 30px;
     color: white;
 }

@@ -8,13 +8,13 @@ p{
 body{
 	width:100%;
 	height:100%;
-	margin:0px;
-	padding:0px;
+	margin:0;
+	padding:0;
 }
 header{
 	width:100%;
-	margin:0px;
-	padding:0px;
+	margin:0;
+	padding:0;
 }
 #contact-head{
     font-size: 17px;
@@ -41,7 +41,7 @@ header{
 	.qou {
 		margin-top: 9px;
 	}
-  
+
 }
 .nav a:hover{
     color: rgba(0,0,0,.7);
@@ -57,8 +57,8 @@ header{
     padding: 3px;
     display:block;
     content: '';
-    border-bottom: solid 3px #14CC60;  
-    transform: scaleX(0);  
+    border-bottom: solid 3px #14CC60;
+    transform: scaleX(0);
     transition: transform 250ms ease-in-out;
 }
 

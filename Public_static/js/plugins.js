@@ -1,8 +1,7 @@
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     let method;
-    const noop = function () {
-    };
+    const noop = function() {};
     const methods = [
         'assert',
         'clear',
@@ -29,7 +28,7 @@
         'trace',
         'warn',
     ];
-    let {length} = methods;
+    let { length } = methods;
     const console = (window.console = window.console || {});
 
     while (length--) {
