@@ -5,17 +5,13 @@
     "main": "index.js",
     "scripts": {
         "test": "mocha __test__/**/*.test.js",
-        "lint": "eslint './**/*.{js,css,html}'"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "precommit": "lint-staged"
     },
     "lint-staged": {
-        "./**/*.{js,css,html,md}": [
-            "prettier --write",
-            "yarn lint",
+        "*.{js,css,html,json}": [
+            "./node_modules/.bin/prettier --single-quote --write",
             "git add"
         ]
     },
