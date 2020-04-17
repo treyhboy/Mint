@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Mint Sign up</title>
@@ -44,12 +44,12 @@
     ></script>
     <script>
       $(function() {
-        $("#datepicker").datepicker({
-          changeMonth: true,
-          changeYear: true,
-          yearRange: "1910:+nn",
-          defaultDate: null
-        });
+          $('#datepicker').datepicker({
+              changeMonth: true,
+              changeYear: true,
+              yearRange: '1910:+nn',
+              defaultDate: null,
+          });
       });
     </script>
   </head>
@@ -58,8 +58,6 @@
     <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-white">
         <div class="container">
             <a class="navbar-brand logo" href="./index.html"><i class="ion-paper-airplane" style="color: #14CC60"></i>Mint</a>
-
-            
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
@@ -123,7 +121,7 @@
               type="text"
               name="mobile"
               value=""
-              id="mob"
+              id="mobile"
             />
             <label class="floating-label" for="mobile">Mobile Number</label>
           </div>
@@ -133,7 +131,7 @@
               type="text"
               name="email"
               value=""
-              id="em"
+              id="email"
             />
             <label class="floating-label" for="email">Email</label>
           </div>
@@ -151,24 +149,14 @@
             <input class="text-input" type="text" id="datepicker" />
             <label class="floating-label" for="datepicker">Birthday</label>
           </div>
-          <div>
-            <input
-              type="radio"
-              name="gender"
-              value="female"
-              class="radio-button"
-              id="female"
-            /><label for="female">Female</label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              name="gender"
-              value="male"
-              class="radio-button"
-              id="male"
-            /><label for="male">Male</label>
-          </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                <label class="form-check-label" for="female">&emsp;Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                <label class="form-check-label" for="male">&emsp;Male</label>
+            </div>
         </div>
 
         <input

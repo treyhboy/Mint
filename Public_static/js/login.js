@@ -1,10 +1,10 @@
-$(function () {
+$(function() {
     const user = $('#user');
     const pass = $('#pass');
     const submit = $('#submit');
-    submit.click(function (event) {
+    submit.click(function(event) {
         event.preventDefault();
-        $.post('/login', {email: user.val(), password: pass.val()}, function (
+        $.post('/login', { email: user.val(), password: pass.val() }, function(
             data
         ) {
             console.log('submit');

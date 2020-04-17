@@ -5,7 +5,7 @@ $(function() {
     const em = $('#em');
     const pass = $('#pass');
     const submit = $('#create-account');
-    submit.click(function () {
+    submit.click(function() {
         $.post(
             '/signup',
             {
@@ -15,7 +15,7 @@ $(function() {
                 email: em.val(),
                 password: pass.val(),
             },
-            function (data) {
+            function(data) {
                 if (data.success) {
                     window.location.href = 'http://localhost:3100/';
                     sessionStorage.setItem('name', fname.val() + lname.val());
@@ -23,12 +23,12 @@ $(function() {
             }
         );
     });
-    $('input').on('focus', function (e) {
+    $('input').on('focus', function(e) {
         $(e.currentTarget)
             .siblings('label')
             .addClass('active');
     });
-    $('input').on('focusout', function (e) {
+    $('input').on('focusout', function(e) {
         if ($(e.currentTarget).prop('value').length > 0) {
             $(e.currentTarget)
                 .siblings('label')
