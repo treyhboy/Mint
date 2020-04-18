@@ -1,55 +1,67 @@
 {
-  "name": "ftrack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha __test__/**/*.test.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/treyhboy/Ftrack.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/treyhboy/Ftrack/issues"
-  },
-  "homepage": "https://github.com/treyhboy/Ftrack#readme",
-  "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.18.2",
-    "dotenv": "^6.0.0",
-    "express": "^4.16.2",
-    "express-session": "^1.15.6",
-    "jsdom": "^13.0.0",
-    "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.15",
-    "mysql": "^2.15.0",
-    "mysql2": "^1.4.2",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "sequelize": "^4.44.3",
-    "socket.io": "^2.0.4"
-  },
-  "devDependencies": {
-    "babel-eslint": "^9.0.0",
-    "chai": "^4.2.0",
-    "chai-spies": "^1.0.0",
-    "eslint": "^5.14.1",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-config-wesbos": "0.0.19",
-    "eslint-plugin-html": "^5.0.3",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-react-hooks": "^1.3.0",
-    "mocha": "^6.2.1",
-    "prettier": "^1.16.4",
-    "sinon": "^7.5.0"
-  }
+    "name": "ftrack",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha __test__/**/*.test.js",
+        "pre-commit": "lint-staged"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run pre-commit"
+        }
+    },
+    "lint-staged": {
+        "**/*.+(js|md|ts|css|sass|less|graphql|yml|yaml|scss|vue)": [
+            "eslint --fix",
+            "prettier --write"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/treyhboy/Ftrack.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/treyhboy/Ftrack/issues"
+    },
+    "homepage": "https://github.com/treyhboy/Ftrack#readme",
+    "dependencies": {
+        "bcrypt-nodejs": "0.0.3",
+        "body-parser": "^1.18.2",
+        "dotenv": "^6.0.0",
+        "express": "^4.16.2",
+        "express-session": "^1.15.6",
+        "jsdom": "^13.0.0",
+        "jsonwebtoken": "^8.5.1",
+        "lodash": "^4.17.15",
+        "mysql": "^2.15.0",
+        "mysql2": "^1.4.2",
+        "passport": "^0.4.0",
+        "passport-local": "^1.0.0",
+        "sequelize": "^4.44.3",
+        "socket.io": "^2.0.4"
+    },
+    "devDependencies": {
+        "babel-eslint": "^9.0.0",
+        "chai": "^4.2.0",
+        "chai-spies": "^1.0.0",
+        "eslint": "^5.14.1",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-config-prettier": "^4.1.0",
+        "eslint-config-wesbos": "0.0.19",
+        "eslint-plugin-html": "^5.0.3",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-jsx-a11y": "^6.2.1",
+        "eslint-plugin-prettier": "^3.0.1",
+        "eslint-plugin-react": "^7.12.4",
+        "eslint-plugin-react-hooks": "^1.3.0",
+        "husky": "^4.2.5",
+        "lint-staged": "^10.1.4",
+        "mocha": "^6.2.1",
+        "prettier": "^1.16.4",
+        "sinon": "^7.5.0"
+    }
 }
