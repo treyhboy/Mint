@@ -14,6 +14,30 @@ const spending = require('./db').spendings;
 const { reminder } = require('./db');
 const response = require('./utils-module/response');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
+
+function signIn(profile, done) {
+    user.findOne({ where: { 'email': profile.emails[0].value } }).then(userObj => {
+
+        if (!userObj) {
+
+            let newUser = {
+                username: profile.displayName,
+                email: profile.emails[0].value,
+            };
+
+            // Creating a new user if not exist
+            user.create(newUser).then(user => {
+                return done(null, user);
+            }).catch(error => {
+                return done(error, null);
+            });
+        }
+        else {
+            return done(null, userObj);
+        }
+    });
+}
 
 // Use the GoogleStrategy within Passport.
 //   Strategies in Passport require a `verify` function, which accept
@@ -25,28 +49,18 @@ passport.use(new GoogleStrategy({
     callbackURL: "http://localhost:3100/google/callback"
 },
     function (accessToken, refreshToken, profile, done) {
-        user.findOne({ 'email': profile.email }).then(user => {
-
-            if (!user) {
-
-                let newUser = {
-                    username: profile.displayName,
-                    email: profile.emails[0].value,
-                };
-
-                // Creating a new user if not exist
-                user.create(newUser).then(user => {
-                    return done(null, user);
-                }).catch(error => {
-                    return done(error, null);
-                });
-            }
-            else {
-                return done(null, user);
-            }
-        });
+        signIn(profile, done);
     }
 ));
+
+passport.use(new FacebookStrategy({
+    clientID: 'CLIENT_ID',
+    clientSecret: 'CLIENT_SECRET',
+    callbackURL: 'http://localhost:3100/facebook/callback',
+    profileFields: ['name', 'displayName', 'email']
+}, function (accessToken, refreshToken, profile, done) {
+    signIn(profile, done);
+}));
 
 // To locate the config folder by default it searches for .env here it is .env.example
 
@@ -122,6 +136,17 @@ app.get('/google/callback', (req, res, next) => {
         // Redirecting to /main URL after successful lgon
         res.redirect('http://localhost:3100/main.html');
     });
+
+// Redirect the user to Facebook for authentication.  When complete,
+// Facebook will redirect the user back to the application at
+//     /auth/facebook/callback
+app.get('/facebook', passport.authenticate('facebook', { scope: ['email', 'public_profile'] }));
+
+// Facebook will redirect the user to this URL after approval.  Finish the
+// authentication process by attempting to obtain an access token.  If
+// access was granted, the user will be logged in.  Otherwise,
+// authentication has failed.
+app.get('/facebook/callback', passport.authenticate('facebook', { successRedirect: '/main.html', failureRedirect: '/login' }));
 
 app.use('/', require('./routes/index'));
 

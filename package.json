@@ -61,6 +61,7 @@
         "husky": "^4.2.5",
         "lint-staged": "^10.1.4",
         "mocha": "^6.2.1",
+        "passport-facebook": "^3.0.0",
         "passport-google-oauth": "^2.0.0",
         "prettier": "^1.16.4",
         "sinon": "^7.5.0"
