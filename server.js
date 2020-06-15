@@ -6,6 +6,7 @@ const express = require('express');
 const app = express();
 const bp = require('body-parser');
 const passport = require('passport');
+const async = require('async');
 const session = require('express-session');
 const { user } = require('./db');
 const Investment = require('./db').investment;
