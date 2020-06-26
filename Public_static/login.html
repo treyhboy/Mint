@@ -19,47 +19,60 @@
 
   <body>
     <header>
-      <div class="container-fluid hi">
-        <div class="row">
-          <div class="col-2">
-            <a href="index.html"><h1 class="logo">
-              <i class="ion-paper-airplane" style="color: #14CC60"></i>Mint</h1></a>
-          </div>
-          <div class="col">
-            <ul class="nav justify-content-center">
-              <li class="nav-item " > <a class="nav-link he" href="about.html">About</a> </li>
-              <li class="nav-item "><a class="nav-link he" href="index.html#how_it_works"> How it Works</a> </li>
-              <li class="nav-item "><a class="nav-link he" href="signup.html">  Get Started </a></li>
-              <li class="nav-item "><a class="nav-link he" href="index.html#con"> Contact </a></li>
-            </ul>
-          </div>
-          <div class="col-1" id="face">
-            <button type="button" class="btn but">
-              <a href="login.html" style="text-decoration: none;color: white">
-                <i class="fas fa-key"></i>
-                &nbsp;Login
-              </a>
-            </button>
-            <button type="button" class="btn but">
-              <a href="/google" style="text-decoration: none;color: white">
-                <i class="fa fa-key"></i>
-                &nbsp;Google Login
-              </a>
-            </button>
-          </div>
+      <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand logo" href="#"><i class="ion-paper-airplane" style="color: #14CC60"></i>Mint</a>
+
+            <div class="d-flex">
+                <ul class="navbar-nav d-sm-none d-block mr-3">
+                    <li class="nav-item">
+                        <a class="nav-link but login" href="./login.html"><i class="fas fa-key"></i>
+                            &nbsp;Login</a>
+                    </li>
+                </ul>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#how_it_works">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./signup.html">Get Started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#con">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </nav>
     </header>
 
-    <div class="loginbox">
+    <div class="loginbox" style="align-content: center;">
       <img alt="Default User Icon" src="img/user.png" class="user">
-      <div style="margin-top: 100px;margin-left: 10px">
-        <form >
-          <p style="color: black">Email</p>
+      <div style="margin-top: 100px;">
+        <br />
+        <form style="text-align: center;">
+          <p style="color: black; text-align: left;">Email</p>
           <input type="text" name="" id="user" />
-          <p style="color: black">Password</p>
+          <p style="color: black; text-align: left;">Password</p>
           <input type="password" name="" id="pass"/>
           <input type="button" class="btn-primary btn-lg" style="color: white;border-radius: 15px;margin-top: 20px    " id="submit" name="" value="LOGIN"/>
+          <button type="button" class="btn but" style="border-radius: 15px;">
+            <a href="/google" style="text-decoration: none;color: white">
+              <i class="fa fa-key"></i>
+              &nbsp;Login With Google
+            </a>
+          </button>
         </form>
       </div>
     </div>
