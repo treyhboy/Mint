@@ -1,0 +1,27 @@
+name: Mint tests
+on: [push, pull_request]
+
+jobs:
+    container: node:10.11.0-alpine
+
+    services:
+        mysql:
+            image: mysql:5.6
+            env:
+                MYSQL_ROOT_PASSWORD: toor
+                MYSQL_DATABASE: testdb
+            options: >-
+                --health-cmd mysqladmin ping
+                --health-interval 10s
+                --health-timeout 5s
+                --health-retry 3
+
+    steps:
+        - name: Checkout repository code
+          uses: actions/checkout@v2
+
+        - name: Install dependencies
+          run: npm ci
+
+        - name: Run tests
+          run: npm test
