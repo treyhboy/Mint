@@ -43,7 +43,7 @@
         "passport": "^0.4.0",
         "passport-local": "^1.0.0",
         "sequelize": "^5.15.1",
-        "socket.io": "^2.0.4"
+        "socket.io": "^2.4.0"
     },
     "devDependencies": {
         "babel-eslint": "^9.0.0",
