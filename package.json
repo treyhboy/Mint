@@ -42,6 +42,7 @@
         "mysql2": "^1.4.2",
         "passport": "^0.4.0",
         "passport-local": "^1.0.0",
+        "passport-google-oauth": "^2.0.0",
         "sequelize": "^5.15.1",
         "socket.io": "^2.0.4"
     },
@@ -62,7 +63,6 @@
         "husky": "^4.2.5",
         "lint-staged": "^10.1.4",
         "mocha": "^6.2.1",
-        "passport-google-oauth": "^2.0.0",
         "prettier": "^1.16.4",
         "sinon": "^7.5.0"
     }
