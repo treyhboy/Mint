@@ -4,7 +4,7 @@ const chai = require('chai')
 const sinon = require('sinon');
 const spies = require('chai-spies');
 
-const db = require('../../../db');
+const { Spendings, Investment } = require('../../../db');
 const transaction = require('../../../routes/expenses/transaction');
 
 chai.use(spies);
@@ -26,8 +26,8 @@ describe('transaction', () => {
   it('queries the right place ont the db (spending)', async () => {
     const spy_spendings = chai.spy();
     const spy_investment = chai.spy();
-    const stub_spendings = sinon.stub(db.spendings, 'create').callsFake(spy_spendings);
-    const stub_investment = sinon.stub(db.investment, 'create').callsFake(spy_investment);
+    const stub_spendings = sinon.stub(Spendings, 'create').callsFake(spy_spendings);
+    const stub_investment = sinon.stub(Investment, 'create').callsFake(spy_investment);
 
     await transaction(
       { body: { type: 'Spending' }},
@@ -45,8 +45,8 @@ describe('transaction', () => {
   it('queries the right place ont the db (Investment)', async () => {
     const spy_spendings = chai.spy();
     const spy_investment = chai.spy();
-    const stub_spendings = sinon.stub(db.spendings, 'create').callsFake(spy_spendings);
-    const stub_investment = sinon.stub(db.investment, 'create').callsFake(spy_investment);
+    const stub_spendings = sinon.stub(Spendings, 'create').callsFake(spy_spendings);
+    const stub_investment = sinon.stub(Investment, 'create').callsFake(spy_investment);
 
     await transaction(
       { body: { type: 'Investment' }},
