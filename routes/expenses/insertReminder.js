@@ -4,11 +4,12 @@ const { Reminder } = require("../../db");
 // this looks good
 const insertReminder = async (req, res) => {
     try {
+        const { user, det, amt, dat } = req.body;
         await Reminder.create({
-            user: req.body.user,
-            detail: req.body.det,
-            amount: req.body.amt,
-            date: req.body.dat
+            user,
+            detail: det,
+            amount: amt,
+            date: dat
         });
         res.send({ status: true });
     } catch (err) {
