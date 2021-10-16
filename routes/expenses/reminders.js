@@ -3,7 +3,7 @@ const { Reminder } = require("../../db");
 const getReminders = async (req, res) => {
     try {
         const { user } = req.body;
-        const db = await Reminder.find({ user });
+        const db = await Reminder.findAll({ user });
         if (db.length === 0) {
             return res.send({ status: "not found" });
         }

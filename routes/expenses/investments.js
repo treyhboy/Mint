@@ -3,7 +3,7 @@ const { Investment } = require("../../db");
 const getInvestments = async (req, res) => {
     try {
         const { user } = req.body;
-        const db = await Investment.find({ user });
+        const db = await Investment.findAll({ user });
         if (db.length === 0) {
             return res.send({ status: "not found" });
         }
