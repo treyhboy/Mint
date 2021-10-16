@@ -1,15 +1,16 @@
-const Investment = require('../../db').investment;
+const { Investment } = require("../../db");
 
 const getInvestments = async (req, res) => {
     try {
-        const db = await Investment.findAll({ where: { user: req.body.user } });
-        if (db[0]) {
-            res.send({ status: 'found', data: db });
-        } else {
-            res.send({ status: 'not found' });
+        const { user } = req.body;
+        const db = await Investment.findAll({ user });
+        if (db.length === 0) {
+            return res.send({ status: "not found" });
         }
+
+        res.send({ status: "found", data: db });
     } catch (err) {
-        console.log('err');
+        console.log("err");
         res.send(err);
     }
 };

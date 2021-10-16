@@ -4,7 +4,7 @@ const chai = require('chai')
 const sinon = require('sinon');
 const spies = require('chai-spies');
 
-const db = require('../../../db');
+const { Investment } = require('../../../db');
 const investmentOverview = require('../../../routes/expenses/investmentOverview');
 
 chai.use(spies);
@@ -26,7 +26,7 @@ describe('investmentOverview', () => {
   it('calls create with the right parameters', async () => {
     const result = 'bar';
     const callback = chai.spy(() => result);
-    const stub = sinon.stub(db.investment, 'findAll').callsFake(callback);
+    const stub = sinon.stub(Investment, 'findAll').callsFake(callback);
 
     await investmentOverview(
       { body: { user: 'foo' }},
@@ -43,7 +43,7 @@ describe('investmentOverview', () => {
   it('response is still sent if errors are thrown', async () => {
     const error = new Error();
     const callback = chai.spy(() => { throw error; });
-    const stub = sinon.stub(db.investment, 'findAll').callsFake(callback);
+    const stub = sinon.stub(Investment, 'findAll').callsFake(callback);
 
     await investmentOverview(
       { body: { user: 'foo' }},

@@ -1,31 +1,28 @@
-const db = require('../../db');
-
-const spending = db.spendings;
-const { investment } = db;
+const { Spendings, Investment } = require("../../db");
 
 const transactionData = async (req, res) => {
     try {
-        console.log(req.body.type);
-        if (req.body.type === 'Spending') {
-            await spending.create({
-                user: req.body.user,
-                detail: req.body.det,
-                amount: req.body.amt,
-                Mode: req.body.mode,
+        const { type, user, det, amt, mode } = req.body;
+        if (type === "Spending") {
+            await Spendings.create({
+                user,
+                detail: det,
+                amount: amt,
+                Mode: mode
             });
-            console.log('spending');
+            console.log("spending");
         } else {
-            await investment.create({
-                user: req.body.user,
-                detail: req.body.det,
-                amount: req.body.amt,
-                Mode: req.body.mode,
+            await Investment.create({
+                user,
+                detail: det,
+                amount: amt,
+                Mode: mode
             });
-            console.log('investment');
+            console.log("investment");
         }
         res.send({ status: true });
     } catch (err) {
-        console.log('err');
+        console.log("err");
         res.send(err);
     }
 };

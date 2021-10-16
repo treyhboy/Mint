@@ -1,70 +1,70 @@
 /**
  * @summary server use passport express mysql sequelize socket.io
  */
-const express = require('express');
+const express = require("express");
 
 const app = express();
-const bp = require('body-parser');
-const passport = require('passport');
-const async = require('async');
-const session = require('express-session');
-const { user } = require('./db');
-const Investment = require('./db').investment;
-const spending = require('./db').spendings;
-const { reminder } = require('./db');
-const response = require('./utils-module/response');
-const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+const passport = require("passport");
+const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
+const session = require("express-session");
+const response = require("./utils-module/response");
+const { User } = require("./db");
+
+const PORT = 3100;
 
 // Use the GoogleStrategy within Passport.
 //   Strategies in Passport require a `verify` function, which accept
 //   credentials (in this case, an accessToken, refreshToken, and Google
 //   profile), and invoke a callback with a user object.
-passport.use(new GoogleStrategy({
-    clientID: 'CLIENT_ID',
-    clientSecret: 'CLIENT_SECRET',
-    callbackURL: "http://localhost:3100/google/callback"
-},
-    function (accessToken, refreshToken, profile, done) {
-        user.findOne({ 'email': profile.email }).then(user => {
+passport.use(
+    new GoogleStrategy(
+        {
+            clientID: "CLIENT_ID",
+            clientSecret: "CLIENT_SECRET",
+            callbackURL: `http://localhost:${PORT}/google/callback`
+        },
+        async function(accessToken, refreshToken, profile, done) {
+            try {
+                const { email, emails, displayName } = profile;
 
-            if (!user) {
+                const existingUser = await User.findOne({ email });
 
-                let newUser = {
-                    username: profile.displayName,
-                    email: profile.emails[0].value,
-                };
+                if (existingUser) {
+                    // User found
+                    return done(null, existingUser);
+                }
 
                 // Creating a new user if not exist
-                user.create(newUser).then(user => {
-                    return done(null, user);
-                }).catch(error => {
-                    return done(error, null);
+                const newUser = await User.create({
+                    username: displayName,
+                    email: emails[0].value
                 });
+
+                return done(null, newUser);
+            } catch (err) {
+                return done(err, null);
             }
-            else {
-                return done(null, user);
-            }
-        });
-    }
-));
+        }
+    )
+);
 
 // To locate the config folder by default it searches for .env here it is .env.example
 
 // Sample ENV properties are loaded here in reallife scenario this would be populated by the environment property of machine running the app server
 
-require('dotenv').config({ path: `${process.cwd()}/.env.example` });
+require("dotenv").config({ path: `${process.cwd()}/.env.example` });
 
-app.use('/', express.static(`${__dirname}/Public_static`));
-app.use(bp.urlencoded({ extended: true }));
-app.use(bp.json());
+app.use("/", express.static(`${__dirname}/Public_static`));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use(
-    session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })
+    session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
 ); // session secret
 
 // Passport Authentication Implementation
 
-require('./config/passport.js');
+require("./config/passport.js");
 
 app.use(passport.initialize());
 
@@ -72,8 +72,8 @@ app.use(passport.session()); // persistent login sessions
 
 // Sign up Implementation
 
-app.post('/signup', (req, res, next) => {
-    passport.authenticate('local-signup', function (err, user, info) {
+app.post("/signup", (req, res, next) => {
+    passport.authenticate("local-signup", function(err, user, info) {
         if (err) {
             return response.responseWriter(res, 500, info);
         }
@@ -87,8 +87,8 @@ app.post('/signup', (req, res, next) => {
 
 // Login value is sent to
 
-app.post('/login', (req, res, next) => {
-    passport.authenticate('local-signin', function (err, user, info) {
+app.post("/login", (req, res, next) => {
+    passport.authenticate("local-signin", function(err, user, info) {
         if (err) {
             return response.responseWriter(res, 500, info);
         }
@@ -105,8 +105,12 @@ app.post('/login', (req, res, next) => {
 //   request.  The first step in Google authentication will involve
 //   redirecting the user to google.com.  After authorization, Google
 //   will redirect the user back to this application at /auth/google/callback
-app.get('/google', (req, res, next) => {
-    passport.authenticate('google', { scope: ['profile', 'email'] })(req, res, next);
+app.get("/google", (req, res, next) => {
+    passport.authenticate("google", { scope: ["profile", "email"] })(
+        req,
+        res,
+        next
+    );
 });
 
 // GET /auth/google/callback
@@ -114,17 +118,23 @@ app.get('/google', (req, res, next) => {
 //   request.  If authentication fails, the user will be redirected back to the
 //   login page.  Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
-app.get('/google/callback', (req, res, next) => {
-    passport.authenticate('google', { failureRedirect: '/login' })(req, res, next)
-},
-    function (req, res) {
+app.get(
+    "/google/callback",
+    (req, res, next) => {
+        passport.authenticate("google", { failureRedirect: "/login" })(
+            req,
+            res,
+            next
+        );
+    },
+    (req, res) => {
+        // Redirecting to /main URL after successful login
+        res.redirect(`http://localhost:${PORT}/main.html`);
+    }
+);
 
-        // Redirecting to /main URL after successful lgon
-        res.redirect('http://localhost:3100/main.html');
-    });
+app.use("/", require("./routes/index"));
 
-app.use('/', require('./routes/index'));
-
-app.listen(3100, function () {
-    console.log('Server started on http://localhost:3100');
+app.listen(PORT, () => {
+    console.log(`Server started on http://localhost:${PORT}`);
 });

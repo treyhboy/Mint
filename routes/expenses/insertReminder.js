@@ -1,18 +1,19 @@
 // looks good so far so good
-const { reminder } = require('../../db');
+const { Reminder } = require("../../db");
 
 // this looks good
 const insertReminder = async (req, res) => {
     try {
-        await reminder.create({
-            user: req.body.user,
-            detail: req.body.det,
-            amount: req.body.amt,
-            date: req.body.dat,
+        const { user, det, amt, dat } = req.body;
+        await Reminder.create({
+            user,
+            detail: det,
+            amount: amt,
+            date: dat
         });
         res.send({ status: true });
     } catch (err) {
-        console.log('err');
+        console.log("err");
         res.send(err);
     }
 };

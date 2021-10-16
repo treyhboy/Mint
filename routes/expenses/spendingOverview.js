@@ -1,15 +1,12 @@
-const spending = require('../../db').spendings;
+const { Spendings } = require("../../db");
 
 const spendOverview = async (req, res) => {
     try {
-        const result = await spending.findAll({
-            where: {
-                user: req.body.user,
-            },
-        });
+        const { user } = req.body;
+        const result = await Spendings.findAll({ user });
         res.send(result);
     } catch (err) {
-        console.log('err');
+        console.log("err");
         res.send(err);
     }
 };

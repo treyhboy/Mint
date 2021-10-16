@@ -4,7 +4,7 @@ const chai = require('chai')
 const sinon = require('sinon');
 const spies = require('chai-spies');
 
-const db = require('../../../db');
+const { Reminder } = require('../../../db');
 const insertReminder = require('../../../routes/expenses/insertReminder');
 
 chai.use(spies);
@@ -25,7 +25,7 @@ describe('insertReminder', () => {
 
   it('calls create with the right parameters', async () => {
     const callback = chai.spy(() => Promise.resolve(true));
-    const stub = sinon.stub(db.reminder, 'create').callsFake(callback);
+    const stub = sinon.stub(Reminder, 'create').callsFake(callback);
 
     await insertReminder(
       { body: { user: 'foo', det: 'bar', amt: 1, dat: 'today' }},
@@ -41,7 +41,7 @@ describe('insertReminder', () => {
   it('response is still sent if errors are thrown', async () => {
     const error = new Error();
     const callback = chai.spy(() => { throw error; });
-    const stub = sinon.stub(db.reminder, 'create').callsFake(callback);
+    const stub = sinon.stub(Reminder, 'create').callsFake(callback);
 
     await insertReminder(
       { body: { user: 'foo', det: 'bar', amt: 1, dat: 'today' }},
