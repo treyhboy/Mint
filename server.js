@@ -19,27 +19,27 @@ passport.use(new GoogleStrategy({
     clientSecret: 'CLIENT_SECRET',
     callbackURL: "http://localhost:3100/google/callback"
 },
-    function (accessToken, refreshToken, profile, done) {
-        user.findOne({ 'email': profile.email }).then(user => {
+    async function (accessToken, refreshToken, profile, done) {
+        try {
+            const { email, emails, displayName } = profile
 
-            if (!user) {
+            const user = await user.findOne({ 'email': email })
 
-                let newUser = {
-                    username: profile.displayName,
-                    email: profile.emails[0].value,
-                };
-
-                // Creating a new user if not exist
-                user.create(newUser).then(user => {
-                    return done(null, user);
-                }).catch(error => {
-                    return done(error, null);
-                });
-            }
-            else {
+            if (user) {
+                // User found
                 return done(null, user);
             }
-        });
+
+            // Creating a new user if not exist
+            const newUser = await user.create({
+                username: displayName,
+                email: emails[0].value,
+            })
+
+            return done(null, newUser)
+        } catch (err) {
+            return done(err, null);
+        }
     }
 ));
 
