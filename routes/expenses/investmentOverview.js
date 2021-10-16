@@ -2,11 +2,8 @@ const { Investment } = require("../../db");
 
 const getOverview = async (req, res) => {
     try {
-        const result = await Investment.findAll({
-            where: {
-                user: req.body.user
-            }
-        });
+        const { user } = req.body;
+        const result = await Investment.find({ user });
         res.send(result);
     } catch (err) {
         console.log("err");
