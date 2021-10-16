@@ -5,12 +5,8 @@ const express = require('express');
 
 const app = express();
 const passport = require('passport');
-const async = require('async');
 const session = require('express-session');
 const { user } = require('./db');
-const Investment = require('./db').investment;
-const spending = require('./db').spendings;
-const { reminder } = require('./db');
 const response = require('./utils-module/response');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
@@ -124,6 +120,6 @@ app.get('/google/callback', (req, res, next) => {
 
 app.use('/', require('./routes/index'));
 
-app.listen(3100, function () {
+app.listen(3100, () => {
     console.log('Server started on http://localhost:3100');
 });
