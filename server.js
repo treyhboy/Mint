@@ -6,9 +6,10 @@ const express = require('express');
 const app = express();
 const passport = require('passport');
 const session = require('express-session');
-const { user } = require('./db');
 const response = require('./utils-module/response');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+
+const PORT = 3100;
 
 // Use the GoogleStrategy within Passport.
 //   Strategies in Passport require a `verify` function, which accept
@@ -17,7 +18,7 @@ const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 passport.use(new GoogleStrategy({
     clientID: 'CLIENT_ID',
     clientSecret: 'CLIENT_SECRET',
-    callbackURL: "http://localhost:3100/google/callback"
+    callbackURL: `http://localhost:${PORT}/google/callback`
 },
     async function (accessToken, refreshToken, profile, done) {
         try {
@@ -114,12 +115,12 @@ app.get('/google/callback', (req, res, next) => {
 },
     function (req, res) {
 
-        // Redirecting to /main URL after successful lgon
-        res.redirect('http://localhost:3100/main.html');
+        // Redirecting to /main URL after successful login
+        res.redirect(`http://localhost:${PORT}/main.html`);
     });
 
 app.use('/', require('./routes/index'));
 
-app.listen(3100, () => {
-    console.log('Server started on http://localhost:3100');
+app.listen(PORT, () => {
+    console.log(`Server started on http://localhost:${PORT}`);
 });
