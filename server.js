@@ -4,7 +4,6 @@
 const express = require('express');
 
 const app = express();
-const bp = require('body-parser');
 const passport = require('passport');
 const async = require('async');
 const session = require('express-session');
@@ -55,8 +54,8 @@ passport.use(new GoogleStrategy({
 require('dotenv').config({ path: `${process.cwd()}/.env.example` });
 
 app.use('/', express.static(`${__dirname}/Public_static`));
-app.use(bp.urlencoded({ extended: true }));
-app.use(bp.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use(
     session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })
