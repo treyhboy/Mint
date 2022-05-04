@@ -150,17 +150,16 @@ div {
 }
 
 .contact-box {
-    /* height: 300px;
-        text-align: center; */
+    height: 150px;
+    /* text-align: center; */
     background-color: #0BC675;
 }
 
 #contact-head {
-    color: white;
+    color: #ffffff;
     font-family: 'Roboto', sans-serif;
-    font-size:20px;
     font-weight:bolder;
-    margin:20px 20px 40px 20px;
+    margin:20px 20px 20px 20px;
 }
 
 
