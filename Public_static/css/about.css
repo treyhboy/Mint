@@ -17,9 +17,9 @@ header{
 	padding:0;
 }
 #contact-head{
-    font-size: 17px;
+    font-size: 30px;
     font-weight: 600;
-    padding: 20px;
+    padding: 0 0 0 0;
 }
 .row i{
     color: #ffffff;
