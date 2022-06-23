@@ -35,7 +35,7 @@
         "dotenv": "^6.0.0",
         "express": "^4.16.2",
         "express-session": "^1.15.6",
-        "jsdom": "^13.0.0",
+        "jsdom": "^16.5.0",
         "jsonwebtoken": "^8.5.1",
         "lodash": "^4.17.19",
         "mysql": "^2.15.0",
