@@ -175,4 +175,5 @@ div {
 
 .nav li {
     align-items: center;
+    list-style: none;
 }
