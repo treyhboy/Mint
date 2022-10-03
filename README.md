@@ -1,5 +1,6 @@
 # Mint
 
+a
 [![Mint tests Status](https://github.com/treyhboy/Mint/workflows/Mint%20tests/badge.svg)](https://github.com/treyhboy/Mint/actions)
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
