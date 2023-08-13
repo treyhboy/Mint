@@ -58,4 +58,30 @@ It’s free and easy to get started, and we connect to almost every Indian finan
 
 ## Contribution
 
-Some UI changes to the app would be great for going and some feature enhances.
+Some UI changes and feature enhancements to the app would be great.
+
+## How to contribute
+## Fork this repository
+Fork this repository by clicking on the fork button at the top of this page. This will create a copy of this repository in your account.
+## Clone the repository
+Now clone the forked repository to your machine. Go to your GitHub account, open the forked repository, click on the code button, and then click the copy to clipboard icon.
+Open a terminal and run the following git command:
+Git clone "URL you just copied."
+## Create a branch
+Change to the repository directory on your computer (if you are not already there)
+## Make necessary changes and commit those changes
+Add those changes to the branch you just created using the git add command.
+Now commit those changes using the git commit command:
+Git commit -m "what you changed."
+Replacing what you changed with the changes you made to the project.
+## Push changes to GitHub.
+Push your changes using the command git push:
+Git push -u origin your-branch-name
+Replacing your branch name with the name of the branch you created earlier.
+## Submit your changes for review.
+If you go to your repository on GitHub, you'll see a Compare & Pull request button. Click on that button.
+Now submit the pull request.
+
+
+
+
