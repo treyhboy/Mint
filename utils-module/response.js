@@ -1,14 +1,16 @@
 // Response Writer can be extended for further version defining a simplified one as of now
 
+const constants = require("../config/constants");
+
 module.exports.responseWriter = (res, status, responseObj) => {
     let token = null;
     try {
         // Only if token value is present extraction must be attempted
-        if (responseObj.hasOwnProperty('token')) {
+        if (responseObj.hasOwnProperty("token")) {
             token = responseObj.token;
             return res
                 .status(status)
-                .header('Authorization', token)
+                .header("Authorization", token)
                 .json(responseObj);
         }
     } catch (err) {
@@ -20,7 +22,7 @@ module.exports.responseWriter = (res, status, responseObj) => {
         console.log(`Error occurred ${err.stack}`);
 
         return res
-            .status(500)
+            .status(constants.STATUS_CODE.INTERNAL_SERVER_ERROR)
             .json({ message: `Internal Error ${err.message}` });
     }
 
